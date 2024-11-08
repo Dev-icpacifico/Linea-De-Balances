@@ -1,7 +1,7 @@
 from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
-from .models import Periodo, Partida, Balance, DetalleBalance
+from .models import Periodo, Partida, Balance, DetalleBalance, Proyecto, Fase
 
 
 
@@ -72,15 +72,15 @@ class BalanceResource(resources.ModelResource):
 class DetalleBalanceResource(resources.ModelResource):
     class Meta:
         model = DetalleBalance
-        fields = ('id', 'balance', 'en_plan', 'periodo', 'planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
-        export_order = ('id', 'balance', 'en_plan', 'periodo', 'planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
+        fields = ('id', 'balance', 'en_plan', 'periodo','semana_trabajo','planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
+        export_order = ('id', 'balance', 'en_plan', 'periodo','semana_trabajo','planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
 
 # Define el inline para DetalleBalance
 class DetalleBalanceInline(admin.TabularInline):
     model = DetalleBalance
     extra = 1  # Número de filas vacías al agregar nuevos objetos
     min_num = 1  # Número mínimo de objetos requeridos
-    fields = ('periodo', 'en_plan', 'planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
+    fields = ('periodo','semana_trabajo', 'en_plan', 'planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
     show_change_link = True
 
 # Registra los modelos en el administrador
@@ -102,7 +102,7 @@ class PartidaAdmin(ImportExportModelAdmin):
 @admin.register(Balance)
 class BalanceAdmin(ImportExportModelAdmin):
     resource_class = BalanceResource
-    list_display = ('id', 'partida')
+    list_display = ('id','fase', 'partida')
     search_fields = ('partida__nombre',)
     ordering = ('id',)
     actions = [rellenar_plan_acumulado]
@@ -112,8 +112,16 @@ class BalanceAdmin(ImportExportModelAdmin):
 @admin.register(DetalleBalance)
 class DetalleBalanceAdmin(ImportExportModelAdmin):
     resource_class = DetalleBalanceResource
-    list_display = ('id', 'balance', 'periodo', 'en_plan', 'planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
+    list_display = ('id', 'balance', 'periodo','semana_trabajo','en_plan', 'planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
     search_fields = ('balance__id', 'periodo__semana')
     list_filter = ('en_plan', 'periodo__semana','balance' )
     ordering = ('id',)
     actions = [rellenar_plan_acumulado, rellenar_realizado_acumulado, calcular_proyeccion_media, calcular_proyeccion_acumulado_media]
+
+@admin.register(Proyecto)
+class ProyectoAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Fase)
+class FaseAdmin(admin.ModelAdmin):
+    pass
