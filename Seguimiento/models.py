@@ -51,14 +51,14 @@ class DetalleBalance(models.Model):
     balance = models.ForeignKey(Balance, on_delete=models.CASCADE)
     en_plan = models.BooleanField()
     periodo = models.ForeignKey(Periodo, on_delete=models.CASCADE)
-    planificado = models.IntegerField()
-    realizado = models.IntegerField()
-    plan_acumulado = models.IntegerField()
-    realizado_acumulado = models.IntegerField()
-    proyeccion_media = models.IntegerField()
-    proyeccion_acumulado_media = models.IntegerField()
-    proyeccion_empirica = models.IntegerField()
-    proyeccion_empirica_acumulada = models.IntegerField()
+    planificado = models.IntegerField(blank=True, null=True)
+    realizado = models.IntegerField(blank=True, null=True)
+    plan_acumulado = models.IntegerField(blank=True, null=True)
+    realizado_acumulado = models.IntegerField(blank=True, null=True)
+    proyeccion_media = models.IntegerField(blank=True, null=True)
+    proyeccion_acumulado_media = models.IntegerField(blank=True, null=True)
+    proyeccion_empirica = models.IntegerField(blank=True, null=True)
+    proyeccion_empirica_acumulada = models.IntegerField(blank=True, null=True)
 
 
 

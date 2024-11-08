@@ -85,6 +85,14 @@ DATABASES_POSTGRESQL = {
     'HOST': '127.0.0.1',
     'PORT': '5432',
 }
+DATABASES_POSTGRESQL_PRODUCCION = {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'lbproduccion',
+    'USER': 'postgres',
+    'PASSWORD': 'postgresql',
+    'HOST': '127.0.0.1',
+    'PORT': '5432',
+}
 
 # Configuración de SQLite
 DATABASES_SQLITE = {
@@ -95,7 +103,7 @@ DATABASES_SQLITE = {
 # Selección de la configuración
 # Cambia aquí entre DATABASES_POSTGRESQL y DATABASES_SQLITE
 DATABASES = {
-    'default': DATABASES_POSTGRESQL  # O usa DATABASES_SQLITE para cambiar a SQLite
+    'default': DATABASES_POSTGRESQL_PRODUCCION  # O usa DATABASES_SQLITE para cambiar a SQLite
 }
 
 
