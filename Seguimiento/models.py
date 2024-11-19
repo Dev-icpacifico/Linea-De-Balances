@@ -92,7 +92,6 @@ class DetalleBalance(models.Model):
     proyeccion_empirica_acumulada = models.IntegerField(blank=True, null=True)
 
 
-
     class Meta:
         db_table = 'DetalleBalance'
         verbose_name = 'Detalle Balance'
@@ -102,3 +101,43 @@ class DetalleBalance(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+    """    def save(self, *args, **kwargs):
+            # Guardar primero para obtener el ID (en caso de que sea un nuevo registro)
+            super().save(*args, **kwargs)
+
+            # Paso 1: Configurar los valores de proyeccion_empirica_acumulada en None para los registros anteriores
+            DetalleBalance.objects.filter(
+                balance=self.balance,
+                periodo=self.periodo,
+                id__lt=self.id
+            ).update(proyeccion_empirica_acumulada=None)
+
+            # Paso 2: Asignar el valor de realizado_acumulado del registro actual al registro anterior
+            registro_anterior = DetalleBalance.objects.filter(
+                balance=self.balance,
+                periodo=self.periodo,
+                id__lt=self.id
+            ).order_by('-id').first()
+
+            if registro_anterior:
+                registro_anterior.proyeccion_empirica_acumulada = self.realizado_acumulado
+                registro_anterior.save()
+
+            # Paso 3: Calcular la proyección empírica acumulada desde el registro actual en adelante
+            proyeccion_acumulada = self.realizado_acumulado
+            registros_posteriores = DetalleBalance.objects.filter(
+                balance=self.balance,
+                periodo=self.periodo,
+                id__gte=self.id
+            ).order_by('id')
+
+            for registro in registros_posteriores:
+                if registro.proyeccion_empirica is not None:
+                    proyeccion_acumulada += registro.proyeccion_empirica
+                    registro.proyeccion_empirica_acumulada = proyeccion_acumulada
+                else:
+                    registro.proyeccion_empirica_acumulada = None
+                registro.save()
+
+            super().save(*args, **kwargs)"""

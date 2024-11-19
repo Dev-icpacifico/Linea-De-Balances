@@ -95,7 +95,7 @@ DATABASES_POSTGRESQL_PRODUCCION = {
 }
 DATABASES_POSTGRESQL_TEST_V2 = {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'lbtestv2',
+    'NAME': 'lb_test1',
     'USER': 'postgres',
     'PASSWORD': 'postgresql',
     'HOST': '127.0.0.1',
