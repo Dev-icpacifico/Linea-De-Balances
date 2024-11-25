@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Seguimiento',
+    'ReportesBI',
     'import_export',
 ]
 
@@ -119,6 +120,7 @@ USE_TZ = True
 #STATIC_URL = '/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Puedes cambiar 'staticfiles' por el nombre que prefieras
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

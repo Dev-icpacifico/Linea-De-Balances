@@ -79,17 +79,17 @@ class Balance(models.Model):
 class DetalleBalance(models.Model):
     id = models.AutoField(primary_key=True)
     balance = models.ForeignKey(Balance, on_delete=models.CASCADE)
-    en_plan = models.BooleanField()
+    en_plan = models.BooleanField(verbose_name = "En Plan",help_text="Indica si el registro está dentro del periodo planificado")
     periodo = models.ForeignKey(Periodo, on_delete=models.CASCADE)
-    semana_trabajo = models.IntegerField(blank=True, null=True)
-    planificado = models.IntegerField(blank=True, null=True)
-    realizado = models.IntegerField(blank=True, null=True)
-    plan_acumulado = models.IntegerField(blank=True, null=True)
-    realizado_acumulado = models.IntegerField(blank=True, null=True)
-    proyeccion_media = models.IntegerField(blank=True, null=True)
-    proyeccion_acumulado_media = models.IntegerField(blank=True, null=True)
-    proyeccion_empirica = models.IntegerField(blank=True, null=True)
-    proyeccion_empirica_acumulada = models.IntegerField(blank=True, null=True)
+    semana_trabajo = models.IntegerField(verbose_name = "S.Lab",blank=True, null=True, help_text="Semana laboral del proyecto")
+    planificado = models.IntegerField(verbose_name = "Q.Plan", blank= True, null=True, help_text="Cantidad Planificada")
+    realizado = models.IntegerField(verbose_name = "Q.Real", blank=True, null=True, help_text="Cantidad Realizada")
+    proyeccion_empirica = models.IntegerField(verbose_name = "Py Em", blank=True, null=True, help_text="Proyección Empírica")
+    proyeccion_media = models.IntegerField(verbose_name = "Py Md", blank=True, null=True, help_text="Proyección Media")
+    plan_acumulado = models.IntegerField(verbose_name = "Plan Ac", blank=True, null=True, help_text="Plan Acumulado")
+    realizado_acumulado = models.IntegerField(verbose_name = "Real Ac", blank=True, null=True, help_text="Realizado Acumulado")
+    proyeccion_acumulado_media = models.IntegerField(verbose_name = "Py Md Ac", blank=True, null=True, help_text="Proyección media acumulado")
+    proyeccion_empirica_acumulada = models.IntegerField(verbose_name = "Py Em Ac", blank=True, null=True, help_text="Proyección empírica acumulado")
 
 
     class Meta:

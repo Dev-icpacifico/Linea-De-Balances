@@ -1,14 +1,18 @@
 from django.contrib import admin
+from django.db.models import IntegerField
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 from psycopg2.errorcodes import PRIVILEGE_NOT_GRANTED
-
+from django.forms import NumberInput  # Asegúrate de importar NumberInput
 from .models import Periodo, Partida, Balance, DetalleBalance, Proyecto, Fase
+from django.db import models
+from .forms import DetalleBalanceForm
 
 #  PERMISOS PERSONALIZADOS
 
 from django.contrib.admin import SimpleListFilter
 from .models import DetalleBalance, Fase
+
 
 class FaseFilter(SimpleListFilter):
     title = 'Fase'
@@ -28,6 +32,7 @@ class FaseFilter(SimpleListFilter):
         if self.value():
             return queryset.filter(balance__fase__id=self.value())
         return queryset
+
 
 class PartidaFilter(SimpleListFilter):
     title = 'Partida'
@@ -55,19 +60,16 @@ class PartidaFilter(SimpleListFilter):
         return queryset
 
 
-
-
 # Acción para actualizar registros
 @admin.action(description='Actualizar registros')
 def actualizar_registros(modeladmin, request, queryset):
-
     # Calcular Plan acumulado
     acumulado_plan = 0
     for detalle in queryset.order_by('id'):
         acumulado_plan += detalle.planificado
         detalle.plan_acumulado = acumulado_plan
         detalle.save()
-        if acumulado_plan ==120:
+        if acumulado_plan == 120:
             break
     print("Se ha ejecutado 1 Acción: Calcular Plan acumulado")
 
@@ -79,9 +81,9 @@ def actualizar_registros(modeladmin, request, queryset):
         elif acumulado_real == 120:
             break
         elif detalle.realizado == None:
-            acumulado_real+=0
+            acumulado_real += 0
         else:
-            acumulado_real+=detalle.realizado
+            acumulado_real += detalle.realizado
         # detalle.realizado = acumulado_real
         detalle.save()
     print("Se ha ejecutado 1 Acción: Calcular realizado acumulado")
@@ -153,6 +155,7 @@ def actualizar_registros(modeladmin, request, queryset):
 
     print("Se ha ejecutado 1 Acción: Calcular la proyección empirica acumulada")
 
+
 # Acción para rellenar plan_acumulado
 @admin.action(description='Calcular Plan Acumulado')
 def rellenar_plan_acumulado(modeladmin, request, queryset):
@@ -161,6 +164,7 @@ def rellenar_plan_acumulado(modeladmin, request, queryset):
         acumulado += detalle.planificado
         detalle.plan_acumulado = acumulado
         detalle.save()
+
 
 # Acción para rellenar realizado_acumulado
 @admin.action(description='Calcular Realizado Acumulado')
@@ -183,7 +187,7 @@ def rellenar_realizado_acumulado(modeladmin, request, queryset):
 @admin.action(description='Calcular Proyección Media')
 def calcular_proyeccion_media(modeladmin, request, queryset):
     acumulado_pm = 0
-    contador_pm= 0
+    contador_pm = 0
     for detalle in queryset.order_by('periodo'):
         if detalle.realizado == None:
             detalle.proyeccion_media = acumulado_pm // contador_pm
@@ -206,6 +210,8 @@ def calcular_proyeccion_acumulado_media(modeladmin, request, queryset):
         acumulado_proyeccion += detalle.proyeccion_media
         detalle.proyeccion_acumulado_media = acumulado_proyeccion
         detalle.save()
+
+
 """class DetalleBalanceAdmin(admin.ModelAdmin):
     list_display = ('id', 'balance', 'en_plan', 'periodo', 'planificado', 'plan_acumulado', 'realizado')"""
 
@@ -216,7 +222,7 @@ def recalcular_proyeccion_empirica_acumulada(modeladmin, request, queryset):
     acumulado_proyeccion_e = 0
     id_lst_ra = queryset.order_by('realizado_acumulado').values_list('realizado_acumulado', flat=True).distinct()
     print(id_lst_ra)
-    id_lst_ra =list(id_lst_ra)
+    id_lst_ra = list(id_lst_ra)
     print(id_lst_ra)
     id_lst_ra.remove(None)
     print(id_lst_ra)
@@ -238,7 +244,7 @@ def recalcular_proyeccion_empirica_acumulada(modeladmin, request, queryset):
                 acumulado_proyeccion_e += registro.proyeccion_empirica
                 registro.proyeccion_empirica_acumulada = acumulado_proyeccion_e
                 registro.save()
-        x= x+1
+        x = x + 1
 
     for registro in queryset.order_by('periodo'):
         if registro.proyeccion_empirica_acumulada == None:
@@ -247,10 +253,9 @@ def recalcular_proyeccion_empirica_acumulada(modeladmin, request, queryset):
         elif registro.proyeccion_empirica_acumulada < valor:
             registro.proyeccion_empirica_acumulada = None
             registro.save()
-        elif registro.proyeccion_empirica_acumulada >125:
+        elif registro.proyeccion_empirica_acumulada > 125:
             registro.proyeccion_empirica_acumulada = None
             registro.save()
-
 
 
 # Define los recursos de importación/exportación
@@ -260,31 +265,43 @@ class PeriodoResource(resources.ModelResource):
         fields = ('id', 'semana', 'fecha')
         export_order = ('id', 'semana', 'fecha')
 
+
 class PartidaResource(resources.ModelResource):
     class Meta:
         model = Partida
         fields = ('id', 'nombre')
         export_order = ('id', 'nombre')
 
+
 class BalanceResource(resources.ModelResource):
     class Meta:
         model = Balance
-        fields = ('id', 'partida','fase')
-        export_order = ('id', 'partida','fase')
+        fields = ('id', 'partida', 'fase')
+        export_order = ('id', 'partida', 'fase')
+
 
 class DetalleBalanceResource(resources.ModelResource):
     class Meta:
         model = DetalleBalance
-        fields = ('id', 'balance', 'en_plan', 'periodo','semana_trabajo','planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
-        export_order = ('id', 'balance', 'en_plan', 'periodo','semana_trabajo','planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
+        fields = ('id', 'balance', 'en_plan', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
+                  'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
+                  'proyeccion_empirica_acumulada')
+        export_order = (
+        'id', 'balance', 'en_plan', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
+        'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
+        'proyeccion_empirica_acumulada')
+
 
 # Define el inline para DetalleBalance
 class DetalleBalanceInline(admin.TabularInline):
     model = DetalleBalance
     extra = 1  # Número de filas vacías al agregar nuevos objetos
     min_num = 1  # Número mínimo de objetos requeridos
-    fields = ('periodo','semana_trabajo', 'en_plan', 'planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
+    fields = (
+    'periodo', 'semana_trabajo', 'en_plan', 'planificado', 'realizado', 'proyeccion_empirica', 'proyeccion_media',
+    'plan_acumulado','realizado_acumulado','proyeccion_empirica_acumulada',  'proyeccion_acumulado_media')
     show_change_link = True
+
 
 # Registra los modelos en el administrador
 @admin.register(Periodo)
@@ -295,6 +312,7 @@ class PeriodoAdmin(ImportExportModelAdmin):
     list_filter = ('semana', 'fecha')
     ordering = ('semana', 'fecha')
 
+
 @admin.register(Partida)
 class PartidaAdmin(ImportExportModelAdmin):
     resource_class = PartidaResource
@@ -302,21 +320,26 @@ class PartidaAdmin(ImportExportModelAdmin):
     search_fields = ('nombre',)
     ordering = ('nombre',)
 
+
 @admin.register(Balance)
 class BalanceAdmin(ImportExportModelAdmin):
     resource_class = BalanceResource
-    list_display = ('id','fase', 'partida')
-    list_filter =('fase', 'partida')
+    list_display = ('id', 'fase', 'partida')
+    list_filter = ('fase', 'partida')
     search_fields = ('partida__nombre',)
     ordering = ('id',)
     actions = [rellenar_plan_acumulado]
     inlines = [DetalleBalanceInline]  # Agregar el inline para DetalleBalance
 
+
 # Admin de DetalleBalance no es necesario ya que ahora está en línea en Balance
 @admin.register(DetalleBalance)
 class DetalleBalanceAdmin(ImportExportModelAdmin):
+    # form = DetalleBalanceForm
     resource_class = DetalleBalanceResource
-    list_display = ('id', 'balance', 'periodo','semana_trabajo','en_plan', 'planificado', 'realizado', 'plan_acumulado', 'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica', 'proyeccion_empirica_acumulada')
+    list_display = (
+    'id', 'balance', 'periodo', 'semana_trabajo', 'en_plan', 'planificado', 'realizado', 'proyeccion_empirica', 'proyeccion_media',
+    'plan_acumulado','realizado_acumulado','proyeccion_empirica_acumulada','proyeccion_acumulado_media')
     search_fields = ('balance__id', 'periodo__semana')
     # list_filter = ('en_plan','balance__fase__Proyecto', 'balance__fase__nombre_fase' , 'balance__partida__nombre')
     list_filter = [FaseFilter, PartidaFilter]
@@ -327,11 +350,23 @@ class DetalleBalanceAdmin(ImportExportModelAdmin):
                calcular_proyeccion_acumulado_media,
                recalcular_proyeccion_empirica_acumulada,
                actualizar_registros]
+    """formfield_overrides = {
+        models.IntegerField: {'widget': NumberInput(attrs={'size': 1})},
+    }"""
+
+
+class Media:
+
+
+    css = {
+        'all': ('admin/css/custom_admin.css',)  # Ruta al archivo CSS personalizado
+    }
 
 
 @admin.register(Proyecto)
 class ProyectoAdmin(admin.ModelAdmin):
     pass
+
 
 @admin.register(Fase)
 class FaseAdmin(admin.ModelAdmin):
