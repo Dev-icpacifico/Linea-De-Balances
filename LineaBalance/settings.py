@@ -15,6 +15,7 @@ from pathlib import Path
 import Seguimiento
 from LineaBalance.database import *
 from LineaBalance.jazzmin_settings import JAZZMIN_SETTINGS, JAZZMIN_UI_TWEAKS
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     'Seguimiento',
     'ReportesBI',
     'import_export',
+    'rest_framework',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -118,7 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Puedes cambiar 'staticfiles' por el nombre que prefieras
@@ -131,8 +134,41 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Variables de JAZZMIN desde jazzmin_settings.py
 JAZZMIN_SETTINGS = JAZZMIN_SETTINGS
 JAZZMIN_UI_TWEAKS = JAZZMIN_UI_TWEAKS
+
 CSRF_TRUSTED_ORIGINS = [
     'https://lobms.cdelmar.cl',
     'https://www.lobms.cdelmar.cl',  # Incluye www si lo usas
 ]
+
+
+
+# Variables de Django Rest Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+    # "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.TokenAuthentication',  # Si usas tokens
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',  # Permitir solo usuarios autenticados
+    ],
+
+}
+""" 
+Ver la documentación:
+https://drf-spectacular.readthedocs.io/en/latest/settings.html
+"""
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'LOBMS API',
+    'DESCRIPTION': 'Api para el sistema de administración de lineas de balance de obra',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': True,
+    "CONTACT": {"name": "Soporte", "email": "soporte@miempresa.com"},
+    "LICENSE": {"name": "MIT", "url": "https://opensource.org/licenses/MIT"},
+    # OTHER SETTINGS
+}
 
