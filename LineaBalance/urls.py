@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.contrib.auth.decorators import login_required
+from django.views.generic.base import RedirectView
 from Seguimiento.views import Report
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='/admin/', permanent=True)),  # Redirige la raíz al admin
+
     path('admin/', admin.site.urls),
-    path('reportesbi', (Report.as_view()),name='reportesbi'),
+    # path('', admin.site.urls),
+    path('reportesbi/', login_required((Report.as_view())),name='reportesbi'),
 ]
