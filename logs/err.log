@@ -1,0 +1,2171 @@
+Watching for file changes with StatReloader
+[26/Nov/2024 14:12:07] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:12:07] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[26/Nov/2024 14:12:07] "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+[26/Nov/2024 14:12:08] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[26/Nov/2024 14:12:08] "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+[26/Nov/2024 14:12:08] "GET /static/LOGOLOBMS.jpg HTTP/1.1" 304 0
+[26/Nov/2024 14:12:08] "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[26/Nov/2024 14:12:08] "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+/home/developer/Linea-De-Balances/LineaBalance/wsgi.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 139, in inner_run
+    handler = self.get_handler(*args, **options)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/staticfiles/management/commands/runserver.py", line 31, in get_handler
+    handler = super().get_handler(*args, **options)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 78, in get_handler
+    return get_internal_wsgi_application()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 48, in get_internal_wsgi_application
+    return import_string(app_path)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 844, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 981, in get_code
+  File "<frozen importlib._bootstrap_external>", line 911, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/developer/Linea-De-Balances/LineaBalance/wsgi.py", line 14
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'LineaBalance.productiono
+                                                                            ^
+SyntaxError: EOL while scanning string literal
+/home/developer/Linea-De-Balances/LineaBalance/wsgi.py changed, reloading.
+Watching for file changes with StatReloader
+[26/Nov/2024 14:31:24] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:31:24] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[26/Nov/2024 14:31:24] "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+[26/Nov/2024 14:31:24] "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+[26/Nov/2024 14:31:24] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[26/Nov/2024 14:31:24] "GET /static/LOGOLOBMS.jpg HTTP/1.1" 304 0
+[26/Nov/2024 14:31:24] "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[26/Nov/2024 14:31:25] "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+[26/Nov/2024 14:32:51] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:34:15] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:34:17] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:34:18] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+Watching for file changes with StatReloader
+[26/Nov/2024 14:47:34] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:47:35] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:47:36] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:47:36] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:47:36] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:47:37] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:47:37] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:47:37] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:51:09] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:51:09] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[26/Nov/2024 14:51:09] "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+[26/Nov/2024 14:51:09] "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+[26/Nov/2024 14:51:09] "GET /static/LOGOLOBMS.jpg HTTP/1.1" 304 0
+[26/Nov/2024 14:51:09] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[26/Nov/2024 14:51:09] "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[26/Nov/2024 14:51:09] "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+[26/Nov/2024 14:54:26] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:54:44] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:58:36] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+[26/Nov/2024 14:58:36] "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+[26/Nov/2024 14:58:36] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[26/Nov/2024 14:58:37] "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+[26/Nov/2024 14:58:37] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[26/Nov/2024 14:58:37] "GET /static/LOGOLOBMS.jpg HTTP/1.1" 304 0
+[26/Nov/2024 14:58:37] "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[26/Nov/2024 14:58:37] "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+[26/Nov/2024 14:58:38] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3008
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 223, in run
+    handler()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 256, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 226, in run
+    self.halt()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 384, in stop
+    sock.close_sockets(self.LISTENERS, unlink)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/sock.py", line 212, in close_sockets
+    os.unlink(sock_name)
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gunicorn-lobms.sock'
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 223, in run
+    handler()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 256, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 226, in run
+    self.halt()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 384, in stop
+    sock.close_sockets(self.LISTENERS, unlink)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/sock.py", line 212, in close_sockets
+    os.unlink(sock_name)
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gunicorn-lobms.sock'
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 208, in run
+    self.sleep()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 359, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 201, in run
+    self.manage_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 570, in manage_workers
+    self.spawn_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 223, in run
+    handler()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 256, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 226, in run
+    self.halt()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 384, in stop
+    sock.close_sockets(self.LISTENERS, unlink)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/gunicorn/sock.py", line 212, in close_sockets
+    os.unlink(sock_name)
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gunicorn-lobms.sock'
+Forbidden (Origin checking failed - https://lobms.cdelmar.cl does not match any trusted origins.): /login/
+Forbidden (Origin checking failed - https://lobms.cdelmar.cl does not match any trusted origins.): /login/
+Forbidden (Origin checking failed - https://lobms.cdelmar.cl does not match any trusted origins.): /login/
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Not Found: /reportesbi
+Not Found: /favicon.ico
+Not Found: /reportesbi/
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Not Found: /.env
+Couldnt reverse #
+Not Found: /robots.txt
+Not Found: /favicon.ico
+Not Found: /config.json
+Not Found: /.env
+Not Found: /etc/shadow
+Not Found: /wp-admin/setup-config.php
+Not Found: /docker-compose.yml
+Not Found: /backup.zip
+Not Found: /.ssh/id_ecdsa
+Not Found: /secrets.json
+Not Found: /.kube/config
+Not Found: /config/database.php
+Not Found: /web.config
+Not Found: /wp-config.php
+Not Found: /config/production.json
+Not Found: /dump.sql
+Not Found: /.svn/wc.db
+Not Found: /server.key
+Not Found: /.aws/credentials
+Not Found: /config.php
+Not Found: /backup.tar.gz
+Not Found: /.ssh/id_ed25519
+Not Found: /user_secrets.yml
+Not Found: /backup.sql
+Not Found: /config.yml
+Not Found: /api/.env
+Not Found: /config.yaml
+Not Found: /.git/HEAD
+Not Found: /.vscode/sftp.json
+Not Found: /config.xml
+Not Found: /server-status
+Not Found: /_vti_pvt/service.pwd
+Not Found: /phpinfo.php
+Not Found: /cloud-config.yml
+Not Found: /database.sql
+Not Found: /etc/ssl/private/server.key
+Not Found: /.env.production
+Not Found: /feed
+Not Found: /.ssh/id_rsa
+Not Found: /_vti_pvt/administrators.pwd
+Not Found: /_vti_pvt/authors.pwd
+Not Found: /actuator/gateway/routes
+Not Found: /.git/config
+Not Found: /wp-admin/setup-config.php
+Not Found: /wp-admin/install.php
+Not Found: /owncloud/status.php
+Not Found: /status.php
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /.git/config
+Not Found: //favicon.ico
+Not Found: /favicon.png
+Not Found: //favicon.ico
+Not Found: /favicon.png
+Not Found: /ab2g
+Not Found: /ab2h
+Not Found: /alive.php
+Not Found: /t4
+Not Found: /favicon.ico
+Not Found: /teorema505
+Not Found: /.env
+Not Found: /cgi-bin/luci/;stok=/locale
+Not Found: /456.php
+Not Found: /.env
+Not Found: /wp-includes/ID3/license.txt
+Not Found: /feed/
+Not Found: /xmlrpc.php
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /2020/wp-includes/wlwmanifest.xml
+Not Found: /2019/wp-includes/wlwmanifest.xml
+Not Found: /2021/wp-includes/wlwmanifest.xml
+Not Found: /shop/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /app/.git/config
+Not Found: /public/.git/config
+Not Found: /bootstrap.yml
+Not Found: /.env.example
+Not Found: /.env.old
+Not Found: /.env
+Not Found: /webui/
+Not Found: /.git/config
+Not Found: /favicon.ico
+Not Found: /images/favicon.ico
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Not Found: /.git/config
+Not Found: /.git/
+Not Found: /.env
+Not Found: /.git/config
+Not Found: /.git/config
+Not Found: /.env
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Not Found: /hello.world
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /public/index.php
+Not Found: /index.php
+Not Found: /index.php
+Not Found: /containers/json
+Not Found: /.env
+Not Found: /.git/
+Not Found: /.env
+Not Found: /.git/
+Not Found: /.env
+Not Found: /.git/config
+Not Found: /.git/config
+Not Found: /FD873AC4-CF86-4FED-84EC-4BD59C6F17A7
+Not Found: /.env
+Not Found: /.aws/credentials
+Not Found: /.env
+Not Found: /.env.live
+Not Found: /.env.prod.local
+Not Found: /.env.testing.local
+Not Found: /media../.git/config
+Not Found: /server/.git/config
+Not Found: /www/.git/config
+Not Found: /.env.dist
+Not Found: /.env.example
+Not Found: /.env.production
+Not Found: /.env.testing
+Not Found: /backup/.git/config
+Not Found: /.env.save
+Not Found: /.env.qa
+Not Found: /.env.preprod
+Not Found: /data/.git/config
+Not Found: /.envrc
+Not Found: /.env
+Not Found: /addon/.env
+Not Found: /admincp/.env
+Not Found: /adminer/.env
+Not Found: /admins/.env
+Not Found: /agora/.env
+Not Found: /alpha/.env
+Not Found: /anaconda/.env
+Not Found: /audio/.env
+Not Found: /auth/.env
+Not Found: /awstats/.env
+Not Found: /back/.env
+Not Found: /backend/src/.env
+Not Found: /backup.env
+Not Found: /backup1/.env
+Not Found: /base/.env
+Not Found: /beta/.env
+Not Found: /blankon/.env
+Not Found: /blob/.env
+Not Found: /blue/.env
+Not Found: /bootstrap/.env
+Not Found: /bot/.env
+Not Found: /bu/.env
+Not Found: /bucoffea/.env
+Not Found: /build/.env
+Not Found: /cardea/backend/.env
+Not Found: /cdw-backend/.env
+Not Found: /cfg/.env
+Not Found: /challenge/.env
+Not Found: /challenges/.env
+Not Found: /chat-client/.env
+Not Found: /chiminey/.env
+Not Found: /ci/.env
+Not Found: /cli/.env
+Not Found: /client/src/.env
+Not Found: /clld_dir/.env
+Not Found: /cloud/.env
+Not Found: /code/web/.env
+Not Found: /community/.env
+Not Found: /contact/.env
+Not Found: /.git/config
+Not Found: /.git/config
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /.env
+Not Found: /.env
+Not Found: /ab2g
+Not Found: /ab2h
+Not Found: /alive.php
+Not Found: /t4
+Not Found: /favicon.ico
+Not Found: /teorema505
+Not Found: /favicon.ico
+Not Found: /.env
+Not Found: /favicon.ico
+Not Found: /.env
+Not Found: /favicon.ico
+Not Found: /wp-includes/js/jquery/jquery.js
+Not Found: /wp-includes/js/jquery/jquery.js
+Not Found: /.git/
+Not Found: /.env
+Not Found: /.env
+Not Found: /.env
+Not Found: /.env
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Forbidden (CSRF cookie not set.): /
+Not Found: /cgi-bin/luci/;stok=/locale
+Not Found: /actuator/gateway/routes
+Not Found: /.git/config
+Not Found: /.env
+Not Found: /owa/auth/x.js
+Not Found: /.env
+Not Found: /version
+Not Found: /wp-includes/ID3/license.txt
+Not Found: /feed/
+Not Found: /xmlrpc.php
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /2020/wp-includes/wlwmanifest.xml
+Not Found: /2019/wp-includes/wlwmanifest.xml
+Not Found: /2021/wp-includes/wlwmanifest.xml
+Not Found: /shop/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /%C0
+Not Found: /._wp-config.php
+Not Found: /.aws
+Not Found: /.aws.sh
+Not Found: /.aws/cloudformation/
+Not Found: /.aws/cloudwatch/
+Not Found: /.aws/config
+Not Found: /.aws/config.yaml
+Not Found: /.aws/configurations
+Not Found: /.aws/credentials
+Not Found: /.aws/credentials.js
+Not Found: /.aws/iam/
+Not Found: /.aws/keypairs/
+Not Found: /.aws/keys.conf
+Not Found: /.aws/kms/
+Not Found: /.aws/lambda/
+Not Found: /.aws/rds/
+Not Found: /.aws/s3/config.json
+Not Found: /.aws/s3/credentials.ini
+Not Found: /.aws/s3/secrets.yaml
+Not Found: /.aws/secret_access_key.txt
+Not Found: /.aws/secrets/
+Not Found: /.aws/secretsmanager/
+Not Found: /.aws/ses/
+Not Found: /.c9/metadata/environment/.env
+Not Found: /.circleci/config.yml
+Not Found: /.codeship.yaml
+Not Found: /.codeship.yml
+Not Found: /.config/api.php
+Not Found: /.config/app.php
+Not Found: /.config/auth.php
+Not Found: /.config/broadcasting.php
+Not Found: /.config/cache.php
+Not Found: /.config/database.php
+Not Found: /.config/filesystems.php
+Not Found: /.config/gatsby/config.json
+Not Found: /.config/logging.php
+Not Found: /.config/mail.php
+Not Found: /.config/queue.php
+Not Found: /.config/session.php
+Not Found: /.config/view.php
+Not Found: /.cordova/config.json
+Not Found: /.deployment-config.json
+Not Found: /.docker/.env
+Not Found: /.docker/config.json
+Not Found: /.docker/daemon.json
+Not Found: /.docker/laravel/app/.env
+Not Found: /.dockerfunc
+Not Found: /.env
+Not Found: /.env-example
+Not Found: /.env-sample
+Not Found: /.env.2
+Not Found: /.env.aws
+Not Found: /.env.aws_access_keys
+Not Found: /.env.backup
+Not Found: /.env.bak
+Not Found: /.env.dev
+Not Found: /.env.dev.local
+Not Found: /.env.development
+Not Found: /.env.development.local
+Not Found: /.env.development.sample
+Not Found: /.env.dist
+Not Found: /.env.docker
+Not Found: /.env.docker.dev
+Not Found: /.env.example
+Not Found: /.env.live
+Not Found: /.env.local
+Not Found: /.env.mailer
+Not Found: /.env.mailer_dsn
+Not Found: /.env.mailer_url
+Not Found: /.env.mailgun
+Not Found: /.env.mailjet
+Not Found: /.env.mandrill
+Not Found: /.env.old
+Not Found: /.env.php
+Not Found: /.env.prod
+Not Found: /.env.prod.local
+Not Found: /.env.production
+Not Found: /.env.production.local
+Not Found: /.env.sample
+Not Found: /.env.sample.php
+Not Found: /.env.save
+Not Found: /.env.sendgrid
+Not Found: /.env.sparkpost
+Not Found: /.env.stage
+Not Found: /.env.staging
+Not Found: /.env.swp
+Not Found: /.env.test
+Not Found: /.env.test.local
+Not Found: /.env.test.localapi/.env
+Not Found: /.env.test.sample
+Not Found: /.env.travis
+Not Found: /.env.txt
+Not Found: /.env.uat
+Not Found: /.env.www
+Not Found: /.env.{{DN}}
+Not Found: /.env.{{SD}}
+Not Found: /.env1
+Not Found: /.env_1
+Not Found: /.env_bak
+Not Found: /.env_old
+Not Found: /.env_sample
+Not Found: /.environment
+Not Found: /.envrc
+Not Found: /.envs
+Not Found: /.env~
+Not Found: /.flaskenv
+Not Found: /.ftpconfig
+Not Found: /.ghc.environment
+Not Found: /.git/config
+Not Found: /.gitlab-ci.yml
+Not Found: /.gitlab-ci/.env
+Not Found: /.hsenv
+Not Found: /.jenkins.sh
+Not Found: /.jenv-version
+Not Found: /.json
+Not Found: /.jupyter/jupyter_notebook_config.json
+Not Found: /.lanproxy/config.json
+Not Found: /.local
+Not Found: /.mailer/config
+Not Found: /.mailer/credentials
+Not Found: /.mailer_dsn/config
+Not Found: /.mailer_dsn/credentials
+Not Found: /.mailgun/config
+Not Found: /.mailgun/credentials
+Not Found: /.mailjet/config
+Not Found: /.mailjet/credentials
+Not Found: /.mandrill/config
+Not Found: /.mandrill/credentials
+Not Found: /.msmtprc
+Not Found: /.pam_environment
+Not Found: /.phpinfo
+Not Found: /.powenv
+Not Found: /.production
+Not Found: /.rbenv-gemsets
+Not Found: /.rbenv-version
+Not Found: /.remote
+Not Found: /.s3cfg
+Not Found: /.sendgrid/config
+Not Found: /.sendgrid/credentials
+Not Found: /.sparkpost/config
+Not Found: /.sparkpost/credentials
+Not Found: /.ssh/authorized_keys
+Not Found: /.ssh/id_rsa
+Not Found: /.travis.sh
+Not Found: /.travis.yml
+Not Found: /.venv
+Not Found: /.vscode/.env
+Not Found: /.vscode/ftp-sync.json
+Not Found: /.vscode/sftp.json
+Not Found: /.wp-config.php.bak
+Not Found: /.wp-config.php.swm
+Not Found: /.wp-config.php.swn
+Not Found: /.wp-config.php.swo
+Not Found: /.wp-config.php.swp
+Not Found: /.wp-config.swm
+Not Found: /.wp-config.swn
+Not Found: /.wp-config.swo
+Not Found: /.wp-config.swp
+Not Found: /.zshenv
+Not Found: /07-accessing-data/begin/vue-heroes/.env
+Not Found: /07-accessing-data/end/vue-heroes/.env
+Not Found: /08-routing/begin/vue-heroes/.env
+Not Found: /08-routing/end/vue-heroes/.env
+Not Found: /09-managing-state/begin/vue-heroes/.env
+Not Found: /09-managing-state/end/vue-heroes/.env
+Not Found: /1.php
+Not Found: /123.php
+Not Found: /3-sequelize/final/.env
+Not Found: /31_structure_tests/.env
+Not Found: /API/.env
+Not Found: /API/.env.bak
+Not Found: /API/.env.dev
+Not Found: /API/.env.dist
+Not Found: /API/.env.local
+Not Found: /API/config.env
+Not Found: /APP/.env
+Not Found: /App_Config/ConnectionStrings.config
+Not Found: /Archipel/.env
+Not Found: /Assignment3/.env
+Not Found: /Assignment4/.env
+Not Found: /BACK/.env
+Not Found: /BACKEND/.env
+Not Found: /BackEnd/.env
+Not Found: /Build.bat
+Not Found: /Chai/.env
+Not Found: /ClientApp/.env
+Not Found: /CodeGolf.Web/ClientApp/.env
+Not Found: /ContainerRegistry/.env
+Not Found: /Dockerfile.dev.server
+Not Found: /Exercise.Frontend/.env
+Not Found: /Exercise.Frontend/train/.env
+Not Found: /FE/huey/.env
+Not Found: /FIRST_CONFIG/.env
+Not Found: /FRONT/.env
+Not Found: /FRONTEND/.env
+Not Found: /File/PHP/info.php
+Not Found: /File/PHP/phpinfo
+Not Found: /File/PHP/phpinfo.php
+Not Found: /Final_Project/Airflow_Dag/.env
+Not Found: /Final_Project/StartingFile/.env
+Not Found: /Final_Project/kafka_twitter/.env
+Not Found: /HUNIV_migration/.env
+Not Found: /Hash/.env
+Not Found: /Helmetjs/.env
+Not Found: /Imagebord/.env
+Not Found: /InstantCV/server/.env
+Not Found: /Kubernetes/.env
+Not Found: /Library/.env
+Not Found: /Modix/ClientApp/.env
+Not Found: /MyRentals.Web/ClientApp/.env
+Not Found: /Nodejs-Projects/play-ground/ManageUserRoles/.env
+Not Found: /Nodejs-Projects/play-ground/login/.env
+Not Found: /Nuke.App.Ui/.env
+Not Found: /PHPConf.php
+Not Found: /PHPMailer/src/PHPMailer.php
+Not Found: /PHPMailer/src/SMTP.php
+Not Found: /Passportjs/.env
+Not Found: /Serve_time_server/.env
+Not Found: /Server.php
+Not Found: /Server.txt
+Not Found: /Server/
+Not Found: /Server_with_db/.env
+Not Found: /Simple_server/.env
+Not Found: /Socketio/.env
+Not Found: /Sources/API/.env
+Not Found: /SpotiApps/.env
+Not Found: /Tests/Application/.env
+Not Found: /Travel_form/.env
+Not Found: /User_info/.env
+Not Found: /Utilities/config.js
+Not Found: /Utilities/cred.js
+Not Found: /Web/siteMariage/.env
+Not Found: /YiiMailer/src/YiiMailer.php
+Not Found: /__info.php
+Not Found: /__tests__/test-become/.env
+Not Found: /_info-backoffice.php
+Not Found: /_info.php
+Not Found: /_phpinf.php
+Not Found: /_phpinfo.php
+Not Found: /_poopinfo.php
+Not Found: /_profiler/app_dev.php/phpinfo
+Not Found: /_profiler/app_dev/phpinfo
+Not Found: /_profiler/info
+Not Found: /_profiler/phpinfo
+Not Found: /_profiler/phpinfo.php
+Not Found: /_profiler/phpinfo/info.php
+Not Found: /_profiler/phpinfo/phpinfo.php
+Not Found: /_static/.env
+Not Found: /_wpeprivate/config.json
+Not Found: /a.php
+Not Found: /account/.env
+Not Found: /account/.ftpconfig
+Not Found: /account/.git/config
+Not Found: /account/.gitlab-ci.yml
+Not Found: /account/.ssh/authorized_keys
+Not Found: /account/.vscode/ftp-sync.json
+Not Found: /account/.vscode/sftp.json
+Not Found: /account/App_Config/ConnectionStrings.config
+Not Found: /account/api-config.ini
+Not Found: /account/config.yaml
+Not Found: /account/jenkinsFile
+Not Found: /account/laravel.log
+Not Found: /account/remote-sync.json
+Not Found: /account/server.xml
+Not Found: /account/web.config
+Not Found: /acme-challenge/.env
+Not Found: /acme/.env
+Not Found: /acme_challenges/.env
+Not Found: /actions-server/.env
+Not Found: /adm/.env
+Not Found: /adm/.env.bak
+Not Found: /adm/.env.dev
+Not Found: /adm/.env.dist
+Not Found: /adm/.env.local
+Not Found: /adm/_profiler/phpinfo
+Not Found: /adm/api/info.php
+Not Found: /adm/api/phpinfo.php
+Not Found: /adm/asdf.php
+Not Found: /adm/backend/info.php
+Not Found: /adm/backend/phpinfo.php
+Not Found: /adm/backup/info.php
+Not Found: /adm/backup/phpinfo.php
+Not Found: /adm/config.env
+Not Found: /adm/crm/info.php
+Not Found: /adm/crm/phpinfo.php
+Not Found: /adm/current/info.php
+Not Found: /adm/current/phpinfo.php
+Not Found: /adm/dashboard/phpinfo.php
+Not Found: /adm/dev/info.php
+Not Found: /adm/dev/phpinfo.php
+Not Found: /adm/develop/info.php
+Not Found: /adm/develop/phpinfo.php
+Not Found: /adm/development/iinfo.php
+Not Found: /adm/development/phpinfo.php
+Not Found: /adm/help/info.php
+Not Found: /adm/help/phpinfo.php
+Not Found: /adm/helper/info.php
+Not Found: /adm/helper/phpinfo.php
+Not Found: /adm/i.php
+Not Found: /adm/info.php
+Not Found: /adm/infophp.php
+Not Found: /adm/infos.php
+Not Found: /adm/lara/info.php
+Not Found: /adm/lara/phpinfo.php
+Not Found: /adm/laravel/info.php
+Not Found: /adm/laravel/phpinfo.php
+Not Found: /adm/linusadmin-phpinfo.php
+Not Found: /adm/old_phpinfo.php
+Not Found: /adm/php-info.php
+Not Found: /adm/php.ini
+Not Found: /adm/php.php
+Not Found: /adm/phpinfo
+Not Found: /adm/phpinfo.php
+Not Found: /adm/phpversion.php
+Not Found: /adm/pinfo.php
+Not Found: /adm/server/info.php
+Not Found: /adm/server/phpinfo.php
+Not Found: /adm/service/info.php
+Not Found: /adm/service/phpinfo.php
+Not Found: /adm/services/info.php
+Not Found: /adm/services/phpinfo.php
+Not Found: /adm/temp.php
+Not Found: /adm/test.php
+Not Found: /adm/time.php
+Not Found: /adm/xampp/info.php
+Not Found: /adm/xampp/phpinfo
+Not Found: /adm/xampp/phpinfo.php
+Not Found: /admin-app/.env
+Not Found: /admin.php
+Not Found: /adminer/.env
+Not Found: /administration/.env
+Not Found: /administration/.env.bak
+Not Found: /administration/.env.dev
+Not Found: /administration/.env.dist
+Not Found: /administration/.env.local
+Not Found: /administration/_profiler/phpinfo
+Not Found: /administration/api/info.php
+Not Found: /administration/api/phpinfo.php
+Not Found: /administration/asdf.php
+Not Found: /administration/backend/info.php
+Not Found: /administration/backend/phpinfo.php
+Not Found: /administration/backup/info.php
+Not Found: /administration/backup/phpinfo.php
+Not Found: /administration/config.env
+Not Found: /administration/crm/info.php
+Not Found: /administration/crm/phpinfo.php
+Not Found: /administration/current/info.php
+Not Found: /administration/current/phpinfo.php
+Not Found: /administration/dashboard/phpinfo.php
+Not Found: /administration/dev/info.php
+Not Found: /administration/dev/phpinfo.php
+Not Found: /administration/develop/info.php
+Not Found: /administration/develop/phpinfo.php
+Not Found: /administration/development/iinfo.php
+Not Found: /administration/development/phpinfo.php
+Not Found: /administration/help/info.php
+Not Found: /administration/help/phpinfo.php
+Not Found: /administration/helper/info.php
+Not Found: /administration/helper/phpinfo.php
+Not Found: /administration/i.php
+Not Found: /administration/info.php
+Not Found: /administration/infophp.php
+Not Found: /administration/infos.php
+Not Found: /administration/lara/info.php
+Not Found: /administration/lara/phpinfo.php
+Not Found: /administration/laravel/info.php
+Not Found: /administration/laravel/phpinfo.php
+Not Found: /administration/linusadmin-phpinfo.php
+Not Found: /administration/old_phpinfo.php
+Not Found: /administration/php-info.php
+Not Found: /administration/php.ini
+Not Found: /administration/php.php
+Not Found: /administration/phpinfo
+Not Found: /administration/phpinfo.php
+Not Found: /administration/phpversion.php
+Not Found: /administration/pinfo.php
+Not Found: /administration/server/info.php
+Not Found: /administration/server/phpinfo.php
+Not Found: /administration/service/info.php
+Not Found: /administration/service/phpinfo.php
+Not Found: /administration/services/info.php
+Not Found: /administration/services/phpinfo.php
+Not Found: /administration/temp.php
+Not Found: /administration/test.php
+Not Found: /administration/time.php
+Not Found: /administration/xampp/info.php
+Not Found: /administration/xampp/phpinfo
+Not Found: /administration/xampp/phpinfo.php
+Not Found: /administrator/.env
+Not Found: /administrator/components/com_ubackapi/aws_lambda_config.json
+Not Found: /administrator/info.php
+Not Found: /administrator/logs/error.php
+Not Found: /administrator/logs/error_log
+Not Found: /administrator/phpinfo.php
+Not Found: /adminphp.php
+Not Found: /admins/.env
+Not Found: /admins/.env.bak
+Not Found: /admins/.env.dev
+Not Found: /admins/.env.dist
+Not Found: /admins/.env.local
+Not Found: /admins/_profiler/phpinfo
+Not Found: /admins/api/info.php
+Not Found: /admins/api/phpinfo.php
+Not Found: /admins/asdf.php
+Not Found: /admins/backend/info.php
+Not Found: /admins/backend/phpinfo.php
+Not Found: /admins/backup/info.php
+Not Found: /admins/backup/phpinfo.php
+Not Found: /admins/config.env
+Not Found: /admins/crm/info.php
+Not Found: /admins/crm/phpinfo.php
+Not Found: /admins/current/info.php
+Not Found: /admins/current/phpinfo.php
+Not Found: /admins/dashboard/phpinfo.php
+Not Found: /admins/dev/info.php
+Not Found: /admins/dev/phpinfo.php
+Not Found: /admins/develop/info.php
+Not Found: /admins/develop/phpinfo.php
+Not Found: /admins/development/iinfo.php
+Not Found: /admins/development/phpinfo.php
+Not Found: /admins/help/info.php
+Not Found: /admins/help/phpinfo.php
+Not Found: /admins/helper/info.php
+Not Found: /admins/helper/phpinfo.php
+Not Found: /admins/i.php
+Not Found: /admins/info.php
+Not Found: /admins/infophp.php
+Not Found: /admins/infos.php
+Not Found: /admins/lara/info.php
+Not Found: /admins/lara/phpinfo.php
+Not Found: /admins/laravel/info.php
+Not Found: /admins/laravel/phpinfo.php
+Not Found: /admins/linusadmin-phpinfo.php
+Not Found: /admins/old_phpinfo.php
+Not Found: /admins/php-info.php
+Not Found: /admins/php.ini
+Not Found: /admins/php.php
+Not Found: /admins/phpinfo
+Not Found: /admins/phpinfo.php
+Not Found: /admins/phpversion.php
+Not Found: /admins/pinfo.php
+Not Found: /admins/server/info.php
+Not Found: /admins/server/phpinfo.php
+Not Found: /admins/service/info.php
+Not Found: /admins/service/phpinfo.php
+Not Found: /admins/services/info.php
+Not Found: /admins/services/phpinfo.php
+Not Found: /admins/temp.php
+Not Found: /admins/test.php
+Not Found: /admins/time.php
+Not Found: /admins/xampp/info.php
+Not Found: /admins/xampp/phpinfo
+Not Found: /admins/xampp/phpinfo.php
+Not Found: /agora/.env
+Not Found: /alpha/.env
+Not Found: /anaconda/.env
+Not Found: /apache.php
+Not Found: /apache/i.php
+Not Found: /apache/info.php
+Not Found: /apache/phpinfo.php
+Not Found: /apache2.php
+Not Found: /api-config.ini
+Not Found: /api/.env
+Not Found: /api/.env.bak
+Not Found: /api/.env.dev
+Not Found: /api/.env.development
+Not Found: /api/.env.dist
+Not Found: /api/.env.local
+Not Found: /api/.env.production
+Not Found: /api/.env.staging
+Not Found: /api/.env.test
+Not Found: /api/Constants.js
+Not Found: /api/_profiler/phpinfo
+Not Found: /api/api/info.php
+Not Found: /api/api/phpinfo.php
+Not Found: /api/asdf.php
+Not Found: /api/backend/info.php
+Not Found: /api/backend/phpinfo.php
+Not Found: /api/backup/info.php
+Not Found: /api/backup/phpinfo.php
+Not Found: /api/config.env
+Not Found: /api/config.json/backups/.env
+Not Found: /api/config.json/backups/config.json
+Not Found: /api/config.json/backups/credentials
+Not Found: /api/config.json/backups/keys.pem
+Not Found: /api/config.json/backups/secrets.json
+Not Found: /api/config.json/backups/secrets.yaml
+Not Found: /api/config.json/backups/settings.ini
+Not Found: /api/config.json/backups/vars.tf
+Not Found: /api/config.json/config/.env
+Not Found: /api/config.json/config/config.json
+Not Found: /api/config.json/config/credentials
+Not Found: /api/config.json/config/keys.pem
+Not Found: /api/config.json/config/secrets.json
+Not Found: /api/config.json/config/secrets.yaml
+Not Found: /api/config.json/config/settings.ini
+Not Found: /api/config.json/config/vars.tf
+Not Found: /api/config.json/data/.env
+Not Found: /api/config.json/data/config.json
+Not Found: /api/config.json/data/credentials
+Not Found: /api/config.json/data/keys.pem
+Not Found: /api/config.json/data/secrets.json
+Not Found: /api/config.json/data/secrets.yaml
+Not Found: /api/config.json/data/settings.ini
+Not Found: /api/config.json/data/vars.tf
+Not Found: /api/config.json/dev/.env
+Not Found: /api/config.json/dev/config.json
+Not Found: /api/config.json/dev/credentials
+Not Found: /api/config.json/dev/keys.pem
+Not Found: /api/config.json/dev/secrets.json
+Not Found: /api/config.json/dev/secrets.yaml
+Not Found: /api/config.json/dev/settings.ini
+Not Found: /api/config.json/dev/vars.tf
+Not Found: /api/config.json/dist/.env
+Not Found: /api/config.json/dist/config.json
+Not Found: /api/config.json/dist/credentials
+Not Found: /api/config.json/dist/keys.pem
+Not Found: /api/config.json/dist/secrets.json
+Not Found: /api/config.json/dist/secrets.yaml
+Not Found: /api/config.json/dist/settings.ini
+Not Found: /api/config.json/dist/vars.tf
+Not Found: /api/config.json/prod/.env
+Not Found: /api/config.json/prod/config.json
+Not Found: /api/config.json/prod/credentials
+Not Found: /api/config.json/prod/keys.pem
+Not Found: /api/config.json/prod/secrets.json
+Not Found: /api/config.json/prod/secrets.yaml
+Not Found: /api/config.json/prod/settings.ini
+Not Found: /api/config.json/prod/vars.tf
+Not Found: /api/config.json/src/.env
+Not Found: /api/config.json/src/config.json
+Not Found: /api/config.json/src/credentials
+Not Found: /api/config.json/src/keys.pem
+Not Found: /api/config.json/src/secrets.json
+Not Found: /api/config.json/src/secrets.yaml
+Not Found: /api/config.json/src/settings.ini
+Not Found: /api/config.json/src/vars.tf
+Not Found: /api/config.json/staging/.env
+Not Found: /api/config.json/staging/config.json
+Not Found: /api/config.json/staging/credentials
+Not Found: /api/config.json/staging/keys.pem
+Not Found: /api/config.json/staging/secrets.json
+Not Found: /api/config.json/staging/secrets.yaml
+Not Found: /api/config.json/staging/settings.ini
+Not Found: /api/config.json/staging/vars.tf
+Not Found: /api/config.json/v1/.env
+Not Found: /api/config.json/v1/config.json
+Not Found: /api/config.json/v1/credentials
+Not Found: /api/config.json/v1/keys.pem
+Not Found: /api/config.json/v1/secrets.json
+Not Found: /api/config.json/v1/secrets.yaml
+Not Found: /api/config.json/v1/settings.ini
+Not Found: /api/config.json/v1/vars.tf
+Not Found: /api/config.json/v2/.env
+Not Found: /api/config.json/v2/config.json
+Not Found: /api/config.json/v2/credentials
+Not Found: /api/config.json/v2/keys.pem
+Not Found: /api/config.json/v2/secrets.json
+Not Found: /api/config.json/v2/secrets.yaml
+Not Found: /api/config.json/v2/settings.ini
+Not Found: /api/config.json/v2/vars.tf
+Not Found: /api/controllers/userController.js
+Not Found: /api/crm/info.php
+Not Found: /api/crm/phpinfo.php
+Not Found: /api/current/info.php
+Not Found: /api/current/phpinfo.php
+Not Found: /api/dashboard/phpinfo.php
+Not Found: /api/db.js
+Not Found: /api/dev/info.php
+Not Found: /api/dev/phpinfo.php
+Not Found: /api/develop/info.php
+Not Found: /api/develop/phpinfo.php
+Not Found: /api/development/iinfo.php
+Not Found: /api/development/phpinfo.php
+Not Found: /api/help/info.php
+Not Found: /api/help/phpinfo.php
+Not Found: /api/helper/info.php
+Not Found: /api/helper/phpinfo.php
+Not Found: /api/i.php
+Not Found: /api/index.php/v1/config/application
+Not Found: /api/info.php
+Not Found: /api/infophp.php
+Not Found: /api/infos.php
+Not Found: /api/keys/private.key/backups/.env
+Not Found: /api/keys/private.key/backups/config.json
+Not Found: /api/keys/private.key/backups/credentials
+Not Found: /api/keys/private.key/backups/keys.pem
+Not Found: /api/keys/private.key/backups/secrets.json
+Not Found: /api/keys/private.key/backups/secrets.yaml
+Not Found: /api/keys/private.key/backups/settings.ini
+Not Found: /api/keys/private.key/backups/vars.tf
+Not Found: /api/keys/private.key/config/.env
+Not Found: /api/keys/private.key/config/config.json
+Not Found: /api/keys/private.key/config/credentials
+Not Found: /api/keys/private.key/config/keys.pem
+Not Found: /api/keys/private.key/config/secrets.json
+Not Found: /api/keys/private.key/config/secrets.yaml
+Not Found: /api/keys/private.key/config/settings.ini
+Not Found: /api/keys/private.key/config/vars.tf
+Not Found: /api/keys/private.key/data/.env
+Not Found: /api/keys/private.key/data/config.json
+Not Found: /api/keys/private.key/data/credentials
+Not Found: /api/keys/private.key/data/keys.pem
+Not Found: /api/keys/private.key/data/secrets.json
+Not Found: /api/keys/private.key/data/secrets.yaml
+Not Found: /api/keys/private.key/data/settings.ini
+Not Found: /api/keys/private.key/data/vars.tf
+Not Found: /api/keys/private.key/dev/.env
+Not Found: /api/keys/private.key/dev/config.json
+Not Found: /api/keys/private.key/dev/credentials
+Not Found: /api/keys/private.key/dev/keys.pem
+Not Found: /api/keys/private.key/dev/secrets.json
+Not Found: /api/keys/private.key/dev/secrets.yaml
+Not Found: /api/keys/private.key/dev/settings.ini
+Not Found: /api/keys/private.key/dev/vars.tf
+Not Found: /api/keys/private.key/dist/.env
+Not Found: /api/keys/private.key/dist/config.json
+Not Found: /api/keys/private.key/dist/credentials
+Not Found: /api/keys/private.key/dist/keys.pem
+Not Found: /api/keys/private.key/dist/secrets.json
+Not Found: /api/keys/private.key/dist/secrets.yaml
+Not Found: /api/keys/private.key/dist/settings.ini
+Not Found: /api/keys/private.key/dist/vars.tf
+Not Found: /api/keys/private.key/prod/.env
+Not Found: /api/keys/private.key/prod/config.json
+Not Found: /api/keys/private.key/prod/credentials
+Not Found: /api/keys/private.key/prod/keys.pem
+Not Found: /api/keys/private.key/prod/secrets.json
+Not Found: /api/keys/private.key/prod/secrets.yaml
+Not Found: /api/keys/private.key/prod/settings.ini
+Not Found: /api/keys/private.key/prod/vars.tf
+Not Found: /api/keys/private.key/src/.env
+Not Found: /api/keys/private.key/src/config.json
+Not Found: /api/keys/private.key/src/credentials
+Not Found: /api/keys/private.key/src/keys.pem
+Not Found: /api/keys/private.key/src/secrets.json
+Not Found: /api/keys/private.key/src/secrets.yaml
+Not Found: /api/keys/private.key/src/settings.ini
+Not Found: /api/keys/private.key/src/vars.tf
+Not Found: /api/keys/private.key/staging/.env
+Not Found: /api/keys/private.key/staging/config.json
+Not Found: /api/keys/private.key/staging/credentials
+Not Found: /api/keys/private.key/staging/keys.pem
+Not Found: /api/keys/private.key/staging/secrets.json
+Not Found: /api/keys/private.key/staging/secrets.yaml
+Not Found: /api/keys/private.key/staging/settings.ini
+Not Found: /api/keys/private.key/staging/vars.tf
+Not Found: /api/keys/private.key/v1/.env
+Not Found: /api/keys/private.key/v1/config.json
+Not Found: /api/keys/private.key/v1/credentials
+Not Found: /api/keys/private.key/v1/keys.pem
+Not Found: /api/keys/private.key/v1/secrets.json
+Not Found: /api/keys/private.key/v1/secrets.yaml
+Not Found: /api/keys/private.key/v1/settings.ini
+Not Found: /api/keys/private.key/v1/vars.tf
+Not Found: /api/keys/private.key/v2/.env
+Not Found: /api/keys/private.key/v2/config.json
+Not Found: /api/keys/private.key/v2/credentials
+Not Found: /api/keys/private.key/v2/keys.pem
+Not Found: /api/keys/private.key/v2/secrets.json
+Not Found: /api/keys/private.key/v2/secrets.yaml
+Not Found: /api/keys/private.key/v2/settings.ini
+Not Found: /api/keys/private.key/v2/vars.tf
+Not Found: /api/keys/public.key/backups/.env
+Not Found: /api/keys/public.key/backups/config.json
+Not Found: /api/keys/public.key/backups/credentials
+Not Found: /api/keys/public.key/backups/keys.pem
+Not Found: /api/keys/public.key/backups/secrets.json
+Not Found: /api/keys/public.key/backups/secrets.yaml
+Not Found: /api/keys/public.key/backups/settings.ini
+Not Found: /api/keys/public.key/backups/vars.tf
+Not Found: /api/keys/public.key/config/.env
+Not Found: /api/keys/public.key/config/config.json
+Not Found: /api/keys/public.key/config/credentials
+Not Found: /api/keys/public.key/config/keys.pem
+Not Found: /api/keys/public.key/config/secrets.json
+Not Found: /api/keys/public.key/config/secrets.yaml
+Not Found: /api/keys/public.key/config/settings.ini
+Not Found: /api/keys/public.key/config/vars.tf
+Not Found: /api/keys/public.key/data/.env
+Not Found: /api/keys/public.key/data/config.json
+Not Found: /api/keys/public.key/data/credentials
+Not Found: /api/keys/public.key/data/keys.pem
+Not Found: /api/keys/public.key/data/secrets.json
+Not Found: /api/keys/public.key/data/secrets.yaml
+Not Found: /api/keys/public.key/data/settings.ini
+Not Found: /api/keys/public.key/data/vars.tf
+Not Found: /api/keys/public.key/dev/.env
+Not Found: /api/keys/public.key/dev/config.json
+Not Found: /api/keys/public.key/dev/credentials
+Not Found: /api/keys/public.key/dev/keys.pem
+Not Found: /api/keys/public.key/dev/secrets.json
+Not Found: /api/keys/public.key/dev/secrets.yaml
+Not Found: /api/keys/public.key/dev/settings.ini
+Not Found: /api/keys/public.key/dev/vars.tf
+Not Found: /api/keys/public.key/dist/.env
+Not Found: /api/keys/public.key/dist/config.json
+Not Found: /api/keys/public.key/dist/credentials
+Not Found: /api/keys/public.key/dist/keys.pem
+Not Found: /api/keys/public.key/dist/secrets.json
+Not Found: /api/keys/public.key/dist/secrets.yaml
+Not Found: /api/keys/public.key/dist/settings.ini
+Not Found: /api/keys/public.key/dist/vars.tf
+Not Found: /.aws/credentials
+Not Found: /config.json
+Not Found: /config.yml
+Not Found: /.env.bak
+Not Found: /.env.prod.local
+Not Found: /.env.testing
+Not Found: /.git/
+Not Found: /.env
+Not Found: /ads.txt
+Not Found: /ads.txt
+Not Found: /webui/
+Not Found: /favicon.ico
+Not Found: /geoserver/web/
+Not Found: /.git/config
+Not Found: /.git/
+Not Found: /.env
+Not Found: /.env
+Not Found: /.env
+Not Found: /.git/
+Not Found: /actuator/health
+Not Found: /cgi-bin/luci/;stok=/locale
+Not Found: /cgi-bin/luci/;stok=/locale
+Not Found: /_profiler/phpinfo
+Not Found: /.env
+Not Found: /favicon.ico
+Not Found: /autodiscover/autodiscover.json
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /.env
+Not Found: /hello.world
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /public/index.php
+Not Found: /index.php
+Not Found: /index.php
+Not Found: /containers/json
+Not Found: /.env
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /.env.backup
+Not Found: /wp-includes/wlwmanifest.xml
+Not Found: /wp-includes/wlwmanifest.xml
+Not Found: /xmlrpc.php
+Not Found: /xmlrpc.php
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /website/wp-includes/wlwmanifest.xml
+Not Found: /website/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /news/wp-includes/wlwmanifest.xml
+Not Found: /news/wp-includes/wlwmanifest.xml
+Not Found: /2018/wp-includes/wlwmanifest.xml
+Not Found: /2018/wp-includes/wlwmanifest.xml
+Not Found: /2019/wp-includes/wlwmanifest.xml
+Not Found: /2019/wp-includes/wlwmanifest.xml
+Not Found: /shop/wp-includes/wlwmanifest.xml
+Not Found: /shop/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /config/.env
+Not Found: /media/wp-includes/wlwmanifest.xml
+Not Found: /media/wp-includes/wlwmanifest.xml
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /prod/.env
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /sito/wp-includes/wlwmanifest.xml
+Not Found: /sito/wp-includes/wlwmanifest.xml
+Not Found: /config.json
+Not Found: /.env.prod
+Not Found: /.env.tmp
+Not Found: /.aws/credentials
+Not Found: /.env.ci
+Not Found: /.env.qa
+Not Found: /core/.git/config
+Not Found: /api/.git/config
+Not Found: /www/.git/config
+Not Found: /.env_sample
+Not Found: /api/.env
+Not Found: /media../.git/config
+Not Found: /config/.git/config
+Not Found: /.env.dev.local
+Not Found: /.env.docker-compose
+Not Found: /configuration/.env
+Not Found: /.env.template
+Not Found: /assets../.git/config
+Not Found: /media/.git/config
+Not Found: /.env.docker
+Not Found: /.env.stage
+Not Found: /build/.env
+Not Found: /.git/config
+Not Found: /.env.live
+Not Found: /.env.test
+Not Found: /.env
+Not Found: /.env
+Not Found: /.git/config
+Not Found: /actuator/gateway/routes
+Not Found: /favicon.ico
+Not Found: /.env
+Not Found: /.env
+Not Found: /hello.world
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /RDWeb/Pages/
+Not Found: /456.php
+Not Found: /webui/
+Not Found: /favicon.ico
+Not Found: /geoserver/web/
+Not Found: /.git/config
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /.env
+Not Found: /.env
+Not Found: /RDWeb/Pages/
+Not Found: /favicon.ico
+Not Found: /.env
+Not Found: /hello.world
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /public/index.php
+Not Found: /index.php
+Not Found: /index.php
+Not Found: /containers/json
+Not Found: /.env
+Invalid HTTP_HOST header: '/tmp/gunicorn-lobms.sock:'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '/tmp/gunicorn-lobms.sock:'. The domain name provided is not valid according to RFC 1034/1035.
+Bad Request: /
+Invalid HTTP_HOST header: '/tmp/gunicorn-lobms.sock:'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '/tmp/gunicorn-lobms.sock:'. The domain name provided is not valid according to RFC 1034/1035.
+Not Found: /nmaplowercheck1732886433
+Not Found: /webui
+Not Found: /s6Ji
+Not Found: /rest/applinks/1.0/manifest
+Not Found: /index.php
+Not Found: /CSS/Miniweb.css
+Not Found: /webui
+Bad Request: /
+Not Found: /confluence/rest/applinks/1.0/manifest
+Not Found: /user
+Not Found: /HNAP1
+Not Found: /Portal/Portal.mwsl
+Not Found: /default.jsa
+Not Found: /pools/default/buckets
+Not Found: /scripts/WPnBr.dll
+Not Found: /.git/HEAD
+Not Found: /user
+Not Found: /Portal0000.htm
+Not Found: /pools
+Not Found: /docs/cplugError.html/
+Not Found: /start.cgi
+Not Found: /sdk
+Not Found: /default.cfm
+Not Found: /human.aspx
+Not Found: /__Additional
+Not Found: /owa/
+Not Found: /human.aspx
+Not Found: /index.jsp
+Not Found: /owa/
+Not Found: /dana-cached/hc/HostCheckerInstaller.osx
+Not Found: /localstart.cfm
+Not Found: /dana-na/nc/nc_gina_ver.txt
+Not Found: /robots.txt
+Not Found: /+CSCOE+/logon.html
+Not Found: /start.pl
+Not Found: /favicon.ico
+Not Found: /CFIDE/componentutils/
+Not Found: /readme.txt
+Not Found: /geoserver/index.html
+Not Found: /admin.jsa
+Not Found: /geoserver/
+Not Found: /home.jsa
+Not Found: /geoserver/web/wicket/bookmarkable/org.geoserver.web.AboutGeoServerPage
+Not Found: /index.cfm
+Not Found: /geoserver/web/wicket/bookmarkable/org.geoserver.web.AboutGeoServerPage
+Not Found: /admin.shtml
+Not Found: /Account/Login
+Not Found: /home.jsp
+Not Found: /menu.jsa
+Not Found: /cgi-bin/info.cgi
+Not Found: /xml/info.xml
+Not Found: /admin.pl
+Not Found: /indice.cfm
+Not Found: /magento_version
+Not Found: /api/v1/check-version
+Not Found: /default.aspx
+Not Found: /fog/management/index.php
+Not Found: /localstart.pl
+Not Found: /admin.jsp
+Not Found: /index.aspx
+Not Found: /admin.jhtml
+Not Found: /admin.html
+Not Found: /home.cgi
+Invalid HTTP_HOST header: '/tmp/gunicorn-lobms.sock:'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '/tmp/gunicorn-lobms.sock:'. The domain name provided is not valid according to RFC 1034/1035.
+Bad Request: /
+Not Found: /hello.world
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /public/index.php
+Not Found: /index.php
+Not Found: /index.php
+Not Found: /containers/json
+Not Found: /ab2g
+Not Found: /ab2h
+Not Found: /alive.php
+Not Found: /t4
+Not Found: /favicon.ico
+Not Found: /teorema505

@@ -15,9 +15,9 @@ DATABASES_POSTGRESQL = {
 }
 DATABASES_POSTGRESQL_PRODUCCION = {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'lbproduccion',
+    'NAME': 'lobms_produccion',
     'USER': 'postgres',
-    'PASSWORD': 'postgresql',
+    'PASSWORD': 'YouShallNotPass409#',
     'HOST': '127.0.0.1',
     'PORT': '5432',
 }
