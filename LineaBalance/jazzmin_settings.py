@@ -13,7 +13,7 @@ JAZZMIN_SETTINGS = {
 
     # Logo to use for your site, must be present in static files, used for brand on top left
     # "site_logo": "grafico-de-linea.png",LOGOLOBMS.jpg
-    "site_logo": "LOGOLOBMS.jpg",
+    "site_logo": "logo_mini.jpg",
 
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
     # "login_logo": "grafico-de-linea.png",LOGOLOBMS
@@ -57,7 +57,7 @@ JAZZMIN_SETTINGS = {
         {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
 
         # external url that opens in a new window (Permissions can be added)
-        {"name": "Soporte", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"name": "Soporte", "url": "https://forms.office.com/r/rg5n4wi09f?origin=lprLink", "new_window": True},
 
         # model admin to link to (Permissions checked against model)
         {"model": "auth.User"},
@@ -68,10 +68,12 @@ JAZZMIN_SETTINGS = {
 
     # Additional links to include in the user menu on the top right ("app" url type is not allowed)
     "usermenu_links": [
-        {"name": "Soporte", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True,
+        {"name": "Soporte", "url": "https://forms.office.com/r/rg5n4wi09f?origin=lprLink", "new_window": True,
          "icon": "fa-solid fa-circle-info"},
-        {"name": "Api-Docs", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True,
+        {"name": "Api-Docs", "url":'redoc', "new_window": True,
          "icon": "fa-solid fa-book"},
+        {"name": "API", "url":'swagger-ui', "new_window": True,
+         "icon": "fa-solid fa-share-nodes"},
         {"model": "auth.user"}
     ],
     #############
@@ -111,9 +113,15 @@ JAZZMIN_SETTINGS = {
     # Custom links to append to app groups, keyed on app name
     "custom_links": {
         "seguimiento": [{
-            "name": "Enlace 1",
+            "name": "Plan Intermedio",
             # "url": "templates/pages/reportbi.html",
-            "url": "reportesbi",
+            "url": "#",
+            "icon": "fa-solid fa-up-right-from-square",
+            # "permissions": ["books.view_book"]
+        },{
+            "name": "Plan Semanal",
+            # "url": "templates/pages/reportbi.html",
+            "url": "#",
             "icon": "fa-solid fa-up-right-from-square",
             # "permissions": ["books.view_book"]
         }, ],
@@ -123,12 +131,7 @@ JAZZMIN_SETTINGS = {
             "url": "reportesbi",
             "icon": "fa-solid fa-chart-simple",
             # "permissions": ["books.view_book"]
-        }, {
-            "name": "Enlace 2",
-            "url": "#",
-            "icon": "fa-solid fa-up-right-from-square",
-            # "permissions": ["books.view_book"]
-        }]
+        },]
     },
 
     #################
@@ -147,7 +150,7 @@ JAZZMIN_SETTINGS = {
     # Whether to link font from fonts.googleapis.com (use custom_css to supply font otherwise)
     "use_google_fonts_cdn": True,
     # Whether to show the UI customizer on the sidebar
-    "show_ui_builder": True,
+    "show_ui_builder": False,
 
     ###############
     # Change view #
