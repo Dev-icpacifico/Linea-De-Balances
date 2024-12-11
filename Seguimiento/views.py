@@ -1,7 +1,7 @@
 from django.contrib.admin import site
 from django.views.generic import TemplateView
-from rest_framework import permissions, viewsets
 from drf_spectacular.utils import extend_schema_view, extend_schema
+from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
 from .models import *
