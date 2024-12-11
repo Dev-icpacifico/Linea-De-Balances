@@ -1,0 +1,1496 @@
+openapi: 3.0.3
+info:
+  title: LOBMS API
+  version: 1.0.0
+  description: Api para el sistema de administración de lineas de balance de obra
+  contact:
+    name: Soporte
+    email: soporte@miempresa.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+paths:
+  /api/schema/:
+    get:
+      operationId: schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - af
+          - ar
+          - ar-dz
+          - ast
+          - az
+          - be
+          - bg
+          - bn
+          - br
+          - bs
+          - ca
+          - ckb
+          - cs
+          - cy
+          - da
+          - de
+          - dsb
+          - el
+          - en
+          - en-au
+          - en-gb
+          - eo
+          - es
+          - es-ar
+          - es-co
+          - es-mx
+          - es-ni
+          - es-ve
+          - et
+          - eu
+          - fa
+          - fi
+          - fr
+          - fy
+          - ga
+          - gd
+          - gl
+          - he
+          - hi
+          - hr
+          - hsb
+          - hu
+          - hy
+          - ia
+          - id
+          - ig
+          - io
+          - is
+          - it
+          - ja
+          - ka
+          - kab
+          - kk
+          - km
+          - kn
+          - ko
+          - ky
+          - lb
+          - lt
+          - lv
+          - mk
+          - ml
+          - mn
+          - mr
+          - ms
+          - my
+          - nb
+          - ne
+          - nl
+          - nn
+          - os
+          - pa
+          - pl
+          - pt
+          - pt-br
+          - ro
+          - ru
+          - sk
+          - sl
+          - sq
+          - sr
+          - sr-latn
+          - sv
+          - sw
+          - ta
+          - te
+          - tg
+          - th
+          - tk
+          - tr
+          - tt
+          - udm
+          - uk
+          - ur
+          - uz
+          - vi
+          - zh-hans
+          - zh-hant
+      tags:
+      - schema
+      security:
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/Balances/:
+    get:
+      operationId: v1_Balances_list
+      description: Obtiene una lista de todos los balances registrados.
+      summary: Lista de Balances
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Balance
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedBalanceList'
+          description: ''
+    post:
+      operationId: v1_Balances_create
+      description: Crea un nuevo balance con los datos proporcionados.
+      summary: Crear Balance
+      tags:
+      - Balance
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Balance'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Balance'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Balance'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+          description: ''
+  /api/v1/Balances/{id}/:
+    get:
+      operationId: v1_Balances_retrieve
+      description: Obtiene los detalles de un balance específico por su ID.
+      summary: Detalle de Balance
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Balance.
+        required: true
+      tags:
+      - Balance
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+          description: ''
+    put:
+      operationId: v1_Balances_update
+      description: Actualiza todos los campos de un balance existente.
+      summary: Actualizar Balance
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Balance.
+        required: true
+      tags:
+      - Balance
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Balance'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Balance'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Balance'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+          description: ''
+    patch:
+      operationId: v1_Balances_partial_update
+      description: Actualiza parcialmente los campos de un balance existente.
+      summary: Actualizar Parcialmente Balance
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Balance.
+        required: true
+      tags:
+      - Balance
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedBalance'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedBalance'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedBalance'
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+          description: ''
+    delete:
+      operationId: v1_Balances_destroy
+      description: Elimina un balance específico por su ID.
+      summary: Eliminar Balance
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Balance.
+        required: true
+      tags:
+      - Balance
+      security:
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/Detallebalances/:
+    get:
+      operationId: v1_Detallebalances_list
+      description: Obtiene una lista de todos los detalles de balances registrados.
+      summary: Lista de Detalles de Balance
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - DetalleBalance
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDetalleBalanceList'
+          description: ''
+    post:
+      operationId: v1_Detallebalances_create
+      description: Crea un nuevo detalle de balance con los datos proporcionados.
+      summary: Crear Detalle de Balance
+      tags:
+      - DetalleBalance
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DetalleBalance'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DetalleBalance'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DetalleBalance'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetalleBalance'
+          description: ''
+  /api/v1/Detallebalances/{id}/:
+    get:
+      operationId: v1_Detallebalances_retrieve
+      description: Obtiene los detalles de un registro específico en el balance por
+        su ID.
+      summary: Detalle de Balance
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Detalle Balance.
+        required: true
+      tags:
+      - DetalleBalance
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetalleBalance'
+          description: ''
+    put:
+      operationId: v1_Detallebalances_update
+      description: Actualiza todos los campos de un detalle de balance existente.
+      summary: Actualizar Detalle de Balance
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Detalle Balance.
+        required: true
+      tags:
+      - DetalleBalance
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DetalleBalance'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DetalleBalance'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DetalleBalance'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetalleBalance'
+          description: ''
+    patch:
+      operationId: v1_Detallebalances_partial_update
+      description: Actualiza parcialmente los campos de un detalle de balance existente.
+      summary: Actualizar Parcialmente Detalle de Balance
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Detalle Balance.
+        required: true
+      tags:
+      - DetalleBalance
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedDetalleBalance'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedDetalleBalance'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedDetalleBalance'
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetalleBalance'
+          description: ''
+    delete:
+      operationId: v1_Detallebalances_destroy
+      description: Elimina un detalle de balance específico por su ID.
+      summary: Eliminar Detalle de Balance
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Detalle Balance.
+        required: true
+      tags:
+      - DetalleBalance
+      security:
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/Fases/:
+    get:
+      operationId: v1_Fases_list
+      description: Obtiene una lista de todas las fases disponibles.
+      summary: Lista de Fases
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Fase
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedFaseList'
+          description: ''
+    post:
+      operationId: v1_Fases_create
+      description: Crea una nueva fase con los datos proporcionados.
+      summary: Crear Fase
+      tags:
+      - Fase
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Fase'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Fase'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Fase'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fase'
+          description: ''
+  /api/v1/Fases/{id}/:
+    get:
+      operationId: v1_Fases_retrieve
+      description: Obtiene los detalles de una fase específica por su ID.
+      summary: Detalle de Fase
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Fase.
+        required: true
+      tags:
+      - Fase
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fase'
+          description: ''
+    put:
+      operationId: v1_Fases_update
+      description: Actualiza todos los campos de una fase existente.
+      summary: Actualizar Fase
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Fase.
+        required: true
+      tags:
+      - Fase
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Fase'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Fase'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Fase'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fase'
+          description: ''
+    patch:
+      operationId: v1_Fases_partial_update
+      description: Actualiza parcialmente los campos de una fase existente.
+      summary: Actualizar Parcialmente Fase
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Fase.
+        required: true
+      tags:
+      - Fase
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedFase'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedFase'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedFase'
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fase'
+          description: ''
+    delete:
+      operationId: v1_Fases_destroy
+      description: Elimina una fase específica por su ID.
+      summary: Eliminar Fase
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Fase.
+        required: true
+      tags:
+      - Fase
+      security:
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/Partidas/:
+    get:
+      operationId: v1_Partidas_list
+      description: Obtiene una lista de todas las partidas registradas.
+      summary: Lista de Partidas
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Partida
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPartidaList'
+          description: ''
+    post:
+      operationId: v1_Partidas_create
+      description: Crea una nueva partida con los datos proporcionados.
+      summary: Crear Partida
+      tags:
+      - Partida
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Partida'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Partida'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Partida'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Partida'
+          description: ''
+  /api/v1/Partidas/{id}/:
+    get:
+      operationId: v1_Partidas_retrieve
+      description: Obtiene los detalles de una partida específica por su ID.
+      summary: Detalle de Partida
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Partida.
+        required: true
+      tags:
+      - Partida
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Partida'
+          description: ''
+    put:
+      operationId: v1_Partidas_update
+      description: Actualiza todos los campos de una partida existente.
+      summary: Actualizar Partida
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Partida.
+        required: true
+      tags:
+      - Partida
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Partida'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Partida'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Partida'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Partida'
+          description: ''
+    patch:
+      operationId: v1_Partidas_partial_update
+      description: Actualiza parcialmente los campos de una partida existente.
+      summary: Actualizar Parcialmente Partida
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Partida.
+        required: true
+      tags:
+      - Partida
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedPartida'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedPartida'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedPartida'
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Partida'
+          description: ''
+    delete:
+      operationId: v1_Partidas_destroy
+      description: Elimina una partida específica por su ID.
+      summary: Eliminar Partida
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Partida.
+        required: true
+      tags:
+      - Partida
+      security:
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/Proyectos/:
+    get:
+      operationId: v1_Proyectos_list
+      description: Obtiene una lista de todos los proyectos registrados.
+      summary: Lista de Proyectos
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Proyecto
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProyectoList'
+          description: ''
+    post:
+      operationId: v1_Proyectos_create
+      description: Crea un nuevo proyecto con los datos proporcionados.
+      summary: Crear Proyecto
+      tags:
+      - Proyecto
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Proyecto'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Proyecto'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Proyecto'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proyecto'
+          description: ''
+  /api/v1/Proyectos/{id}/:
+    get:
+      operationId: v1_Proyectos_retrieve
+      description: Obtiene los detalles de un proyecto específico por su ID.
+      summary: Detalle de Proyecto
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Proyecto.
+        required: true
+      tags:
+      - Proyecto
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proyecto'
+          description: ''
+    put:
+      operationId: v1_Proyectos_update
+      description: Actualiza todos los campos de un proyecto existente.
+      summary: Actualizar Proyecto
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Proyecto.
+        required: true
+      tags:
+      - Proyecto
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Proyecto'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Proyecto'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Proyecto'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proyecto'
+          description: ''
+    patch:
+      operationId: v1_Proyectos_partial_update
+      description: Actualiza parcialmente los campos de un proyecto.
+      summary: Actualizar Parcialmente Proyecto
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Proyecto.
+        required: true
+      tags:
+      - Proyecto
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProyecto'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProyecto'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProyecto'
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proyecto'
+          description: ''
+    delete:
+      operationId: v1_Proyectos_destroy
+      description: Elimina un proyecto existente por su ID.
+      summary: Eliminar Proyecto
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Proyecto.
+        required: true
+      tags:
+      - Proyecto
+      security:
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/periodos/:
+    get:
+      operationId: v1_periodos_list
+      description: Obtiene una lista de todos los periodos registrados.
+      summary: Lista de Periodos
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Periodo
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPeriodoList'
+          description: ''
+    post:
+      operationId: v1_periodos_create
+      description: Crea un nuevo periodo con los datos proporcionados.
+      summary: Crear Periodo
+      tags:
+      - Periodo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Periodo'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Periodo'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Periodo'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Periodo'
+          description: ''
+  /api/v1/periodos/{id}/:
+    get:
+      operationId: v1_periodos_retrieve
+      description: Obtiene los detalles de un periodo específico por su ID.
+      summary: Detalle de Periodo
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Periodo.
+        required: true
+      tags:
+      - Periodo
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Periodo'
+          description: ''
+    put:
+      operationId: v1_periodos_update
+      description: Actualiza todos los campos de un periodo existente.
+      summary: Actualizar Periodo
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Periodo.
+        required: true
+      tags:
+      - Periodo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Periodo'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Periodo'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Periodo'
+        required: true
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Periodo'
+          description: ''
+    patch:
+      operationId: v1_periodos_partial_update
+      description: Actualiza parcialmente los campos de un periodo existente.
+      summary: Actualizar Parcialmente Periodo
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Periodo.
+        required: true
+      tags:
+      - Periodo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedPeriodo'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedPeriodo'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedPeriodo'
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Periodo'
+          description: ''
+    delete:
+      operationId: v1_periodos_destroy
+      description: Elimina un periodo específico por su ID.
+      summary: Eliminar Periodo
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Periodo.
+        required: true
+      tags:
+      - Periodo
+      security:
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    Balance:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        fase:
+          type: integer
+        partida:
+          type: integer
+      required:
+      - fase
+      - id
+      - partida
+    DetalleBalance:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        en_plan:
+          type: boolean
+          description: Indica si el registro está dentro del periodo planificado
+        semana_trabajo:
+          type: integer
+          nullable: true
+          title: S.Lab
+          description: Semana laboral del proyecto
+        planificado:
+          type: integer
+          nullable: true
+          title: Q.Plan
+          description: Cantidad Planificada
+        realizado:
+          type: integer
+          nullable: true
+          title: Q.Real
+          description: Cantidad Realizada
+        proyeccion_empirica:
+          type: integer
+          nullable: true
+          title: Py Em
+          description: Proyección Empírica
+        proyeccion_media:
+          type: integer
+          nullable: true
+          title: Py Md
+          description: Proyección Media
+        plan_acumulado:
+          type: integer
+          nullable: true
+          title: Plan Ac
+          description: Plan Acumulado
+        realizado_acumulado:
+          type: integer
+          nullable: true
+          title: Real Ac
+          description: Realizado Acumulado
+        proyeccion_acumulado_media:
+          type: integer
+          nullable: true
+          title: Py Md Ac
+          description: Proyección media acumulado
+        proyeccion_empirica_acumulada:
+          type: integer
+          nullable: true
+          title: Py Em Ac
+          description: Proyección empírica acumulado
+        balance:
+          type: integer
+        periodo:
+          type: integer
+      required:
+      - balance
+      - en_plan
+      - id
+      - periodo
+    Fase:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre_fase:
+          type: string
+          maxLength: 50
+        is_active:
+          type: boolean
+        Proyecto:
+          type: integer
+      required:
+      - Proyecto
+      - id
+      - nombre_fase
+    PaginatedBalanceList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Balance'
+    PaginatedDetalleBalanceList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/DetalleBalance'
+    PaginatedFaseList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Fase'
+    PaginatedPartidaList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Partida'
+    PaginatedPeriodoList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Periodo'
+    PaginatedProyectoList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Proyecto'
+    Partida:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre:
+          type: string
+          maxLength: 50
+      required:
+      - id
+      - nombre
+    PatchedBalance:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        fase:
+          type: integer
+        partida:
+          type: integer
+    PatchedDetalleBalance:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        en_plan:
+          type: boolean
+          description: Indica si el registro está dentro del periodo planificado
+        semana_trabajo:
+          type: integer
+          nullable: true
+          title: S.Lab
+          description: Semana laboral del proyecto
+        planificado:
+          type: integer
+          nullable: true
+          title: Q.Plan
+          description: Cantidad Planificada
+        realizado:
+          type: integer
+          nullable: true
+          title: Q.Real
+          description: Cantidad Realizada
+        proyeccion_empirica:
+          type: integer
+          nullable: true
+          title: Py Em
+          description: Proyección Empírica
+        proyeccion_media:
+          type: integer
+          nullable: true
+          title: Py Md
+          description: Proyección Media
+        plan_acumulado:
+          type: integer
+          nullable: true
+          title: Plan Ac
+          description: Plan Acumulado
+        realizado_acumulado:
+          type: integer
+          nullable: true
+          title: Real Ac
+          description: Realizado Acumulado
+        proyeccion_acumulado_media:
+          type: integer
+          nullable: true
+          title: Py Md Ac
+          description: Proyección media acumulado
+        proyeccion_empirica_acumulada:
+          type: integer
+          nullable: true
+          title: Py Em Ac
+          description: Proyección empírica acumulado
+        balance:
+          type: integer
+        periodo:
+          type: integer
+    PatchedFase:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre_fase:
+          type: string
+          maxLength: 50
+        is_active:
+          type: boolean
+        Proyecto:
+          type: integer
+    PatchedPartida:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre:
+          type: string
+          maxLength: 50
+    PatchedPeriodo:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        semana:
+          type: integer
+        fecha:
+          type: string
+          format: date
+    PatchedProyecto:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre_proyecto:
+          type: string
+          maxLength: 50
+        is_active:
+          type: boolean
+    Periodo:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        semana:
+          type: integer
+        fecha:
+          type: string
+          format: date
+      required:
+      - fecha
+      - id
+      - semana
+    Proyecto:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre_proyecto:
+          type: string
+          maxLength: 50
+        is_active:
+          type: boolean
+      required:
+      - id
+      - nombre_proyecto
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

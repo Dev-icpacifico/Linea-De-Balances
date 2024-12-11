@@ -1,0 +1,1 @@
+/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/rest_framework/static/rest_framework/js/prettify-min.js

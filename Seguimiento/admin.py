@@ -370,4 +370,5 @@ class ProyectoAdmin(admin.ModelAdmin):
 
 @admin.register(Fase)
 class FaseAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'Proyecto', 'nombre_fase', 'is_active',)
+    list_filter = ('id', 'Proyecto', 'nombre_fase', 'is_active',)

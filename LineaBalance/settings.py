@@ -84,8 +84,8 @@ WSGI_APPLICATION = 'LineaBalance.wsgi.application'
 # Selección de la configuración
 # Cambia aquí entre DATABASES_POSTGRESQL y DATABASES_SQLITE
 DATABASES = {
-#     'default':DATABASES_POSTGRESQL_PRODUCCION  # O usa DATABASES_SQLITE para cambiar a SQLite
-      'default':DATABASES_SQLITE
+      'default':DATABASES_POSTGRESQL_PRODUCCION  # O usa DATABASES_SQLITE para cambiar a SQLite
+#      'default':DATABASES_SQLITE
 }
 
 # Password validation
