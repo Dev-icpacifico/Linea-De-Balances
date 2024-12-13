@@ -71,18 +71,23 @@ def actualizar_registros(queryset):
 
     # Calcular realizado acumulado
     acumulado_real = 0
+    max_acumulado = 120  # Define un límite máximo para el acumulado
+
+    # Iterar sobre el queryset ordenado por 'periodo'
     for detalle in queryset.order_by('periodo'):
         if detalle.realizado is None:
-            break
-        elif acumulado_real == 120:
-            break
-        elif detalle.realizado is None:
-            acumulado_real += 0
-        else:
-            acumulado_real += detalle.realizado
-        # detalle.realizado = acumulado_real
-        detalle.save()
-    print("Se ha ejecutado 1 Acción: Calcular realizado acumulado")
+            continue  # Ignorar si no hay valor en 'realizado'
+
+        # Calcular el acumulado sin exceder el límite
+        nuevo_acumulado = acumulado_real + detalle.realizado
+        if nuevo_acumulado > max_acumulado:
+            break  # Detener si el acumulado excede el límite
+
+        acumulado_real = nuevo_acumulado  # Actualizar el acumulado
+        detalle.realizado = acumulado_real  # Asignar el valor acumulado
+        detalle.save()  # Guardar cambios en el registro
+
+    print(f"Se ha ejecutado 'Calcular realizado acumulado' para {len(queryset)} registros procesados.")
 
     # Calcular la proyección Media
     acumulado_pm = 0
@@ -186,9 +191,9 @@ class DetalleBalanceResource(resources.ModelResource):
                   'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
                   'proyeccion_empirica_acumulada')
         export_order = (
-        'id', 'balance', 'en_plan', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
-        'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
-        'proyeccion_empirica_acumulada')
+            'id', 'balance', 'en_plan', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
+            'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
+            'proyeccion_empirica_acumulada')
 
 
 # Define el inline para DetalleBalance
@@ -197,8 +202,8 @@ class DetalleBalanceInline(admin.TabularInline):
     extra = 1  # Número de filas vacías al agregar nuevos objetos
     min_num = 1  # Número mínimo de objetos requeridos
     fields = (
-    'periodo', 'semana_trabajo', 'en_plan', 'planificado', 'realizado', 'proyeccion_empirica', 'proyeccion_media',
-    'plan_acumulado','realizado_acumulado','proyeccion_empirica_acumulada',  'proyeccion_acumulado_media')
+        'periodo', 'semana_trabajo', 'en_plan', 'planificado', 'realizado', 'proyeccion_empirica', 'proyeccion_media',
+        'plan_acumulado', 'realizado_acumulado', 'proyeccion_empirica_acumulada', 'proyeccion_acumulado_media')
     show_change_link = True
 
 
@@ -236,8 +241,9 @@ class DetalleBalanceAdmin(ImportExportModelAdmin):
     # form = DetalleBalanceForm
     resource_class = DetalleBalanceResource
     list_display = (
-    'id', 'balance', 'periodo', 'semana_trabajo', 'en_plan', 'planificado', 'realizado', 'proyeccion_empirica', 'proyeccion_media',
-    'plan_acumulado','realizado_acumulado','proyeccion_empirica_acumulada','proyeccion_acumulado_media')
+        'id', 'balance', 'periodo', 'semana_trabajo', 'en_plan', 'planificado', 'realizado', 'proyeccion_empirica',
+        'proyeccion_media',
+        'plan_acumulado', 'realizado_acumulado', 'proyeccion_empirica_acumulada', 'proyeccion_acumulado_media')
     search_fields = ('balance__id', 'periodo__semana')
     # list_filter = ('en_plan','balance__fase__Proyecto', 'balance__fase__nombre_fase' , 'balance__partida__nombre')
     list_filter = [FaseFilter, PartidaFilter]
@@ -249,8 +255,6 @@ class DetalleBalanceAdmin(ImportExportModelAdmin):
 
 
 class Media:
-
-
     css = {
         'all': ('admin/css/custom_admin.css',)  # Ruta al archivo CSS personalizado
     }
