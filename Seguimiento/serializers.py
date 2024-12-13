@@ -36,4 +36,3 @@ class DetalleBalanceSerializer(serializers.ModelSerializer):
         model = DetalleBalance
         fields = '__all__'
         # depth = 1
-

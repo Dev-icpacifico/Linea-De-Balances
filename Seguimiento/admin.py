@@ -58,7 +58,7 @@ class PartidaFilter(SimpleListFilter):
 
 # Acción para actualizar registros
 @admin.action(description='Actualizar registros')
-def actualizar_registros(modeladmin, request, queryset):
+def actualizar_registros(queryset):
     # Calcular Plan acumulado
     acumulado_plan = 0
     for detalle in queryset.order_by('id'):
@@ -73,17 +73,14 @@ def actualizar_registros(modeladmin, request, queryset):
     acumulado_real = 0
     for detalle in queryset.order_by('periodo'):
         if detalle.realizado is None:
-            detalle.realizado_acumulado = acumulado_real
+            break
         elif acumulado_real == 120:
-            detalle.realizado_acumulado = acumulado_real
-            
+            break
         elif detalle.realizado is None:
-            acumulado_real+=0
-#       	    detalle.realizado = acumulado_real
-#           detalle.save()
+            acumulado_real += 0
         else:
             acumulado_real += detalle.realizado
-            detalle.realizado_acumulado = acumulado_real
+        # detalle.realizado = acumulado_real
         detalle.save()
     print("Se ha ejecutado 1 Acción: Calcular realizado acumulado")
 

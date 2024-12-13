@@ -53,8 +53,8 @@ class Partida(models.Model):
     class Meta:
         db_table = 'Partida'
         verbose_name = 'Partida'
-        verbose_name_plural = 'Partidas'
-        unique_together = (('nombre'),)
+        verbose_name_plural = 'Partids'
+        unique_together = ('nombre',)
         ordering = ['nombre']
 
     def __str__(self):
