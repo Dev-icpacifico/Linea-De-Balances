@@ -58,7 +58,7 @@ class PartidaFilter(SimpleListFilter):
 
 # Acción para actualizar registros
 @admin.action(description='Actualizar registros')
-def actualizar_registros(modeladmin,request,queryset):
+def actualizar_registros(modeladmin, request, queryset):
     # Calcular Plan acumulado
     acumulado_plan = 0
     for detalle in queryset.order_by('id'):
@@ -71,23 +71,19 @@ def actualizar_registros(modeladmin,request,queryset):
 
     # Calcular realizado acumulado
     acumulado_real = 0
-    max_acumulado = 120  # Define un límite máximo para el acumulado
-
-    # Iterar sobre el queryset ordenado por 'periodo'
     for detalle in queryset.order_by('periodo'):
         if detalle.realizado is None:
-            continue  # Ignorar si no hay valor en 'realizado'
-
-        # Calcular el acumulado sin exceder el límite
-        nuevo_acumulado = acumulado_real + detalle.realizado
-        if nuevo_acumulado > max_acumulado:
-            break  # Detener si el acumulado excede el límite
-
-        acumulado_real = nuevo_acumulado  # Actualizar el acumulado
-        detalle.realizado = acumulado_real  # Asignar el valor acumulado
-        detalle.save()  # Guardar cambios en el registro
-
-    print(f"Se ha ejecutado 'Calcular realizado acumulado' para {len(queryset)} registros procesados.")
+            break
+        elif acumulado_real == 120:
+            break
+        elif detalle.realizado is None:
+            acumulado_real += 0
+        else:
+            acumulado_real += detalle.realizado
+        detalle.realizado_acumulado = acumulado_real
+        print("el acumulado es", detalle.realizado_acumulado)
+        detalle.save()
+    print("Se ha ejecutado 1 Acción: Calcular realizado acumulado")
 
     # Calcular la proyección Media
     acumulado_pm = 0
@@ -119,19 +115,25 @@ def actualizar_registros(modeladmin,request,queryset):
 
     acumulado_proyeccion_e = 0
     id_lst_ra = queryset.order_by('realizado_acumulado').values_list('realizado_acumulado', flat=True).distinct()
-    # print(id_lst_ra)
+    print(id_lst_ra)
     id_lst_ra = list(id_lst_ra)
-    # print(id_lst_ra)
-    try:
-        id_lst_ra.remove(None)
-    except ValueError:
-        print(ValueError)
-    # print(id_lst_ra)
+    print(id_lst_ra)
+    id_lst_ra.remove(None)
+    print(ValueError)
+    print(id_lst_ra)
     id_lst_ra.sort(reverse=True)
     valor = id_lst_ra[0]
-    # print(valor)
-    reg = len(id_lst_ra)
-    # print("largo", reg)
+    print(valor)
+    ############
+    indice = queryset.values_list('realizado_acumulado', flat=True)
+    print("indice ", indice)
+    indice = list(indice)
+    print("indice", indice)
+    lista_sin_nones = [x for x in indice if x is not None]
+    print("lista_sin_nones", lista_sin_nones)
+
+    reg = len(lista_sin_nones)
+    print("largo", reg)
 
     x = 1
     for registro in queryset.order_by('periodo'):

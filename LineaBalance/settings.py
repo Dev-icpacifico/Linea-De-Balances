@@ -84,8 +84,8 @@ WSGI_APPLICATION = 'LineaBalance.wsgi.application'
 # Selección de la configuración
 # Cambia aquí entre DATABASES_POSTGRESQL y DATABASES_SQLITE
 DATABASES = {
-        'default':DATABASES_POSTGRESQL_PRODUCCION  # O usa DATABASES_SQLITE para cambiar a SQLite
-#       'default':DATABASES_SQLITE
+    #        'default':DATABASES_POSTGRESQL_PRODUCCION  # O usa DATABASES_SQLITE para cambiar a SQLite
+    'default': DATABASES_SQLITE
 }
 
 # Password validation
@@ -140,8 +140,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://www.lobms.cdelmar.cl',  # Incluye www si lo usas
 ]
 
-
-
 # Variables de Django Rest Framework
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
@@ -171,4 +169,3 @@ SPECTACULAR_SETTINGS = {
     "LICENSE": {"name": "MIT", "url": "https://opensource.org/licenses/MIT"},
     # OTHER SETTINGS
 }
-
