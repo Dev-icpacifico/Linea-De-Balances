@@ -122,7 +122,10 @@ def actualizar_registros(modeladmin,request,queryset):
     # print(id_lst_ra)
     id_lst_ra = list(id_lst_ra)
     # print(id_lst_ra)
-    id_lst_ra.remove(None)
+    try:
+        id_lst_ra.remove(None)
+    except ValueError:
+        print(ValueError)
     # print(id_lst_ra)
     id_lst_ra.sort(reverse=True)
     valor = id_lst_ra[0]
