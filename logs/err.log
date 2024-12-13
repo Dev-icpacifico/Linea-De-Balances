@@ -12354,3 +12354,73 @@ Traceback (most recent call last):
 ValueError: list.remove(x): x not in list
 Couldnt reverse #
 Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Internal Server Error: /admin/Seguimiento/detallebalance/
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/import_export/admin.py", line 553, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/import_export/admin.py", line 779, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/import_export/admin.py", line 65, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+TypeError: actualizar_registros() takes 1 positional argument but 3 were given
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Couldnt reverse #
+Internal Server Error: /admin/Seguimiento/detallebalance/
+Traceback (most recent call last):
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/import_export/admin.py", line 553, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/import_export/admin.py", line 779, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/import_export/admin.py", line 65, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "/home/developer/Linea-De-Balances/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "/home/developer/Linea-De-Balances/Seguimiento/admin.py", line 125, in actualizar_registros
+    id_lst_ra.remove(None)
+ValueError: list.remove(x): x not in list
+Couldnt reverse #
+Couldnt reverse #

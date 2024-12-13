@@ -58,7 +58,7 @@ class PartidaFilter(SimpleListFilter):
 
 # Acción para actualizar registros
 @admin.action(description='Actualizar registros')
-def actualizar_registros(queryset):
+def actualizar_registros(modeladmin,request,queryset):
     # Calcular Plan acumulado
     acumulado_plan = 0
     for detalle in queryset.order_by('id'):
