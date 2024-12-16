@@ -1,10 +1,12 @@
 from django.db import models
 
 # Create your models here.
-class EmptyModel(models.Model):
-    pass
+class ReportBi(models.Model):
+    enlace_reporte = models.TextField("Enlace reporte BI")
 
     class Meta:
-        verbose_name = "Empty Model"
-        verbose_name_plural = "Empty Models"
+        db_table = 'reportbi'
+        verbose_name = 'Reporte BI'
+        verbose_name_plural = 'Reportes BI'
+
 
