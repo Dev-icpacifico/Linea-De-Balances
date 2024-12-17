@@ -119,7 +119,7 @@ def actualizar_registros(modeladmin, request, queryset):
     id_lst_ra = list(id_lst_ra)
     #print(id_lst_ra)
     if None in id_lst_ra:
-        id_lst_ra.remove("")
+        id_lst_ra.remove(None)
     #print(ValueError)
     #print(id_lst_ra)
     id_lst_ra.sort(reverse=True)
