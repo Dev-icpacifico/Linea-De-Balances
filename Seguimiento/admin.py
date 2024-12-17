@@ -115,25 +115,26 @@ def actualizar_registros(modeladmin, request, queryset):
 
     acumulado_proyeccion_e = 0
     id_lst_ra = queryset.order_by('realizado_acumulado').values_list('realizado_acumulado', flat=True).distinct()
-    print(id_lst_ra)
+    #print(id_lst_ra)
     id_lst_ra = list(id_lst_ra)
-    print(id_lst_ra)
-    id_lst_ra.remove(None)
-    print(ValueError)
-    print(id_lst_ra)
+    #print(id_lst_ra)
+    if None in id_lst_ra:
+        id_lst_ra.remove("")
+    #print(ValueError)
+    #print(id_lst_ra)
     id_lst_ra.sort(reverse=True)
     valor = id_lst_ra[0]
-    print(valor)
+    #print(valor)
     ############
     indice = queryset.values_list('realizado_acumulado', flat=True)
-    print("indice ", indice)
+    #print("indice ", indice)
     indice = list(indice)
-    print("indice", indice)
+    #print("indice", indice)
     lista_sin_nones = [x for x in indice if x is not None]
-    print("lista_sin_nones", lista_sin_nones)
+    #print("lista_sin_nones", lista_sin_nones)
 
     reg = len(lista_sin_nones)
-    print("largo", reg)
+    #print("largo", reg)
 
     x = 1
     for registro in queryset.order_by('periodo'):
