@@ -79,7 +79,7 @@ class Balance(models.Model):
 class DetalleBalance(models.Model):
     id = models.AutoField(primary_key=True)
     balance = models.ForeignKey(Balance, on_delete=models.CASCADE)
-    en_plan = models.BooleanField(verbose_name = "En Plan",help_text="Indica si el registro está dentro del periodo planificado")
+    # en_plan = models.BooleanField(verbose_name = "En Plan",help_text="Indica si el registro está dentro del periodo planificado")
     periodo = models.ForeignKey(Periodo, on_delete=models.CASCADE)
     semana_trabajo = models.IntegerField(verbose_name = "S.Lab",blank=True, null=True, help_text="Semana laboral del proyecto")
     planificado = models.IntegerField(verbose_name = "Q.Plan", blank= True, null=True, help_text="Cantidad Planificada")

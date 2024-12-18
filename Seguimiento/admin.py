@@ -193,11 +193,18 @@ class BalanceResource(resources.ModelResource):
 class DetalleBalanceResource(resources.ModelResource):
     class Meta:
         model = DetalleBalance
-        fields = ('id', 'balance', 'en_plan', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
+        """fields = ('id', 'balance', 'en_plan', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
+                  'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
+                  'proyeccion_empirica_acumulada')"""
+        fields = ('id', 'balance', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
                   'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
                   'proyeccion_empirica_acumulada')
-        export_order = (
+        """export_order = (
             'id', 'balance', 'en_plan', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
+            'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
+            'proyeccion_empirica_acumulada')"""
+        export_order = (
+            'id', 'balance', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'plan_acumulado',
             'realizado_acumulado', 'proyeccion_media', 'proyeccion_acumulado_media', 'proyeccion_empirica',
             'proyeccion_empirica_acumulada')
 
@@ -207,8 +214,11 @@ class DetalleBalanceInline(admin.TabularInline):
     model = DetalleBalance
     extra = 1  # Número de filas vacías al agregar nuevos objetos
     min_num = 1  # Número mínimo de objetos requeridos
-    fields = (
+    """fields = (
         'periodo', 'semana_trabajo', 'en_plan', 'planificado', 'realizado', 'proyeccion_empirica', 'proyeccion_media',
+        'plan_acumulado', 'realizado_acumulado', 'proyeccion_empirica_acumulada', 'proyeccion_acumulado_media')"""
+    fields = (
+        'periodo', 'semana_trabajo', 'planificado', 'realizado', 'proyeccion_empirica', 'proyeccion_media',
         'plan_acumulado', 'realizado_acumulado', 'proyeccion_empirica_acumulada', 'proyeccion_acumulado_media')
     show_change_link = True
 
@@ -246,8 +256,12 @@ class BalanceAdmin(ImportExportModelAdmin):
 class DetalleBalanceAdmin(ImportExportModelAdmin):
     # form = DetalleBalanceForm
     resource_class = DetalleBalanceResource
-    list_display = (
+    """list_display = (
         'id', 'balance', 'periodo', 'semana_trabajo', 'en_plan', 'planificado', 'realizado', 'proyeccion_empirica',
+        'proyeccion_media',
+        'plan_acumulado', 'realizado_acumulado', 'proyeccion_empirica_acumulada', 'proyeccion_acumulado_media')"""
+    list_display = (
+        'id', 'balance', 'periodo', 'semana_trabajo', 'planificado', 'realizado', 'proyeccion_empirica',
         'proyeccion_media',
         'plan_acumulado', 'realizado_acumulado', 'proyeccion_empirica_acumulada', 'proyeccion_acumulado_media')
     search_fields = ('balance__id', 'periodo__semana')
